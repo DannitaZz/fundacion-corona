@@ -1,9 +1,11 @@
-import { collection, addDoc, getDocs, getDoc, doc, updateDoc } from "firebase/firestore";
-import db from './firebaseConfig';
+import { collection, addDoc, getDocs, getDoc, doc, updateDoc, deleteDoc } from "firebase/firestore";
+// import { ref, getDownloadURL } from "firebase/storage";
+import {db, storage} from './firebaseConfig';
 
-// función que crea los documentos  de las ordenes.
-export const createSchool = async (name, city, depto, email, tel, date) => {
-    return await addDoc(collection(db, 'admins', 'partners','schools'), {
+// Colegios
+
+export const createSchool = async (name, city, depto, email, tel, date, aId, pId) => {
+    return await addDoc(collection(db, 'admins', aId, 'partners', pId, 'schools'), {
         name,
         city,
         depto,
@@ -12,17 +14,52 @@ export const createSchool = async (name, city, depto, email, tel, date) => {
         date,
     })
 }
-// función que obtiene la colección de documentos.
-export const getSchools =  async () => {
-    return await getDocs(collection(db, 'admins', 'partners', 'schools'));
+
+export const getSchools =  async (aId, pId) => {
+    return await getDocs(collection(db, 'admins', aId, 'partners',  pId, 'schools'));
 }
-// función que obtiene el id de cada documento.
-export const getSchool = async (id) => {
-    const docRef = doc(db, 'admins', 'partners', "schools", id);
+
+export const getSchool = async (aId, pId, sId) => {
+    const docRef = doc(db, 'admins', aId,  'partners', pId, "schools", sId);
     return await getDoc(docRef);
 }
-// función que obtiene el id y el estado de el documento.
-export const updateSchool = async (id, state) => {
-    const docRef = doc(db, 'admins', 'partners', "schools", id);
-    return await updateDoc(docRef, state)
+
+export const updateSchool = async (aId, pId, sId) => {
+    const docRef = doc(db, 'admins', aId,  'partners', pId, "schools", sId);
+    return await updateDoc(docRef)
 } 
+
+export const deleteSchool = async (aId, pId, sId) => {
+    const docRef = doc(db, 'admins', aId,  'partners', pId, "schools", sId);
+    return await deleteDoc(docRef)
+} 
+
+// Aliados 
+
+export const updatePartner = async (aId, pId) => {
+    const docRef = doc(db, 'admins', aId, 'partners', pId);
+    return await updateDoc(docRef)
+}
+
+// Urls
+
+export const getUrls =  async (aId, pId, sId) => {
+    return await getDocs(collection(db, 'admins', aId, 'partners', pId, 'schools', sId, 'urls'));
+}
+
+// PDFs
+
+export const updloadPDF = async (pdf) => {
+    const storageRef = storage.ref();
+    const archivoPath = storageRef.child(pdf.name);
+    await archivoPath.put(pdf);
+    console.log("archivo cargado:", pdf.name);
+    const linkpdf = await archivoPath.getDownloadURL();
+    // Se aconseja guardar este enlace en el estado para luego pasarlo a firestore
+    return linkpdf
+};
+
+
+
+
+
