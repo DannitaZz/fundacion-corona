@@ -1,0 +1,63 @@
+
+.infoColegio main {
+  display: flex;
+  justify-content: center;
+  padding: 80px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.infoColegio .card-container {
+  width: 60%;
+}
+
+.infoColegio h4 {
+  margin: 5px 0;
+}
+
+.infoColegio hr {
+  border-top: 0.5px solid #f0f0f1;
+  margin: 15px 0;
+}
+
+.infoColegio .card-container .title {
+  display: flex;
+  gap: 10px;
+}
+
+.infoColegio .reportes-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.infoColegio .reportes-buttons Button {
+  width: fit-content;
+}
+
+.infoColegio .consulta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.infoColegio .consulta-buttons Button {
+  width: fit-content;
+}
+
+.infoColegio ul {
+  padding: 0;
+}
+
+.infoColegio ul li {
+  list-style: none;
+  padding: 5px;
+}
+
+.infoColegio .notificacion-buttons {
+  display: flex;
+  justify-content: center;
+}
