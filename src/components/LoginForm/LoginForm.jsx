@@ -19,7 +19,7 @@ const LoginForm = () => {
         <FormControl variant="standard">
           <InputLabel htmlFor="input-with-icon-adornment">
             Correo
-        </InputLabel>
+          </InputLabel>
           <Input
             id="input-with-icon-adornment"
             startAdornment={
@@ -33,7 +33,7 @@ const LoginForm = () => {
         <FormControl variant="standard">
           <InputLabel htmlFor="input-with-icon-adornment">
             Contraseña
-        </InputLabel>
+          </InputLabel>
           <Input
             id="input-with-icon-adornment"
             type="password"
