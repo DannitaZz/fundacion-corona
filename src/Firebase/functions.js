@@ -1,11 +1,11 @@
-import { collection, addDoc, getDocs, getDoc, doc, updateDoc, deleteDoc } from "firebase/firestore";
+import { collection, setDoc, addDoc, getDocs, getDoc, doc, updateDoc, deleteDoc } from "firebase/firestore";
 // import { ref, getDownloadURL } from "firebase/storage";
 import {db, storage} from './firebaseConfig';
 
 // Colegios
 
-export const createSchool = async (name, city, depto, email, tel, date,  pId) => {
-    return await addDoc(collection(db,'partners', pId, 'schools'), {
+export const createSchool = async (name, city, depto, email, tel, date,  pId, sId) => {
+    return await setDoc(collection(db,'partners', pId, 'schools', sId), {
         name,
         city,
         depto,
@@ -36,8 +36,8 @@ export const deleteSchool = async (pId, sId) => {
 
 // Aliados 
 
-export const createPartner = async (email) => {
-    return await addDoc(collection(db,'partners'), {
+export const createPartner = async (email, pId) => {
+    return await setDoc(collection(db,'partners', pId), {
         name : '',
         lastname: '',
         email,
@@ -64,8 +64,8 @@ export const deletePartner = async (pId) => {
 } 
 
 // Admins 
-export const createAdmin = async (email) => {
-    return await addDoc(collection(db,'admins'), {
+export const createAdmin = async (email, aId) => {
+    return await setDoc(collection(db,'admins', aId), {
         name: '',
         lastname: '',
         email,
@@ -92,8 +92,8 @@ export const deleteAdmin = async (aId) => {
 } 
 
 // Urls (Power BI)
-export const createUrl = async (pId, sId, date, url) => {
-    return await addDoc(collection(db, 'partners', pId, 'schools', sId, 'urls'), {
+export const createUrl = async (pId, sId, date, url, uId) => {
+    return await setDoc(collection(db, 'partners', pId, 'schools', sId, 'urls', uId), {
         date, 
         url
     })
