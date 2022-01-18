@@ -36,16 +36,16 @@ export const deleteSchool = async (pId, sId) => {
 
 // Aliados 
 
-export const createPartner = async (name, lastname,  email, tel) => {
+export const createPartner = async (email) => {
     return await addDoc(collection(db,'partners'), {
-        name,
-        lastname,
+        name : '',
+        lastname: '',
         email,
-        tel,
+        tel: '',
         
     })
 }
-export const getPartners =  async (pId) => {
+export const getPartners =  async () => {
     return await getDocs(collection(db, 'partners'));
 }
 
@@ -64,16 +64,16 @@ export const deletePartner = async (pId) => {
 } 
 
 // Admins 
-export const createAdmin = async (name, lastname,  email, tel) => {
+export const createAdmin = async (email) => {
     return await addDoc(collection(db,'admins'), {
-        name,
-        lastname,
+        name: '',
+        lastname: '',
         email,
-        tel,
+        tel: '',
         
     })
 }
-export const getAdmins =  async (aId) => {
+export const getAdmins =  async () => {
     return await getDocs(collection(db, 'admins'));
 }
 
