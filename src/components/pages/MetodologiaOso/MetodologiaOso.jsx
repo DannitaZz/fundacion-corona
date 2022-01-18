@@ -4,26 +4,30 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
-const [value, setValue] = React.useState('one');
+export const MetodologiaOso = () => {
+  const [value, setValue] = React.useState('one');
 
-export const MetodologiaOso = (event, newValue) => {
-  setValue(newValue);
-};  
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <div>
       <Header></Header>
-      <Box sx={{width: '100%'}}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          textColor='primary'
-          indicatorColor='secondary'
-          aria-label='secontady tabs example'
-          >
-            <Tab value="one" label="Item One"></Tab>
-          </Tabs>
-      </Box>
-      oso
+       <Box sx={{ width: '100%' }}>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        textColor="secondary"
+        indicatorColor="secondary"
+        aria-label="secondary tabs example"
+      >
+        <Tab value="ORIENTACIÓN SOCIO OCUPACIONAL" label="ORIENTACIÓN SOCIO OCUPACIONAL" />
+        <Tab value="DOCUMENTOS TÉCNICOS" label="DOCUMENTOS TÉCNICOS" />
+      </Tabs>
+    </Box>
+      
     </div>
   )
+}
 export default MetodologiaOso;
