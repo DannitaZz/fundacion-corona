@@ -4,8 +4,8 @@ import {db, storage} from './firebaseConfig';
 
 // Colegios
 
-export const createSchool = async (name, city, depto, email, tel, date, aId, pId) => {
-    return await addDoc(collection(db, 'admins', aId, 'partners', pId, 'schools'), {
+export const createSchool = async (name, city, depto, email, tel, date,  pId) => {
+    return await addDoc(collection(db,'partners', pId, 'schools'), {
         name,
         city,
         depto,
@@ -15,22 +15,22 @@ export const createSchool = async (name, city, depto, email, tel, date, aId, pId
     })
 }
 
-export const getSchools =  async (aId, pId) => {
-    return await getDocs(collection(db, 'admins', aId, 'partners',  pId, 'schools'));
+export const getSchools =  async (pId) => {
+    return await getDocs(collection(db, 'partners',  pId, 'schools'));
 }
 
-export const getSchool = async (aId, pId, sId) => {
-    const docRef = doc(db, 'admins', aId,  'partners', pId, "schools", sId);
+export const getSchool = async (pId, sId) => {
+    const docRef = doc(db, 'partners', pId, "schools", sId);
     return await getDoc(docRef);
 }
 
-export const updateSchool = async (aId, pId, sId) => {
-    const docRef = doc(db, 'admins', aId,  'partners', pId, "schools", sId);
+export const updateSchool = async (pId, sId) => {
+    const docRef = doc(db,  'partners', pId, "schools", sId);
     return await updateDoc(docRef)
 } 
 
-export const deleteSchool = async (aId, pId, sId) => {
-    const docRef = doc(db, 'admins', aId,  'partners', pId, "schools", sId);
+export const deleteSchool = async (pId, sId) => {
+    const docRef = doc(db, 'partners', pId, "schools", sId);
     return await deleteDoc(docRef)
 } 
 
