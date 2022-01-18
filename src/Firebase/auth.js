@@ -45,31 +45,37 @@ export const createUserAdmin = (email, password) => {
 export const signIn = async (email, password) => {
     const auth = getAuth();
 
-    const userCredential = await signInWithEmailAndPassword(auth, email, password)
+    await signInWithEmailAndPassword(auth, email, password)
     
     // Signed in
     const qPartners = await getPartners();
     const qAdmins = await getAdmins();
-    const partners = qPartners.forEach((doc) => {
-        return doc.data();
-    });
-    const admins = qAdmins.forEach((doc) => {
-        return doc.data();
-    });
-    const partnersEmail = partners.map(partner => partner.email);
-    const adminsEmail = admins.map(admin => admin.email);
-    
 
-    if (email.includes(adminsEmail)) {
-        const user = userCredential.user;
+    let admins = []
+    let partners = []
+
+    qPartners.forEach((doc) => {
+        partners.push(doc.data().email);
+    });
+    qAdmins.forEach((doc) => {
+        admins.push(doc.data().email);
+    });
+    console.log('Both', admins, partners);
+
+    console.log('Email', email);
+     console.log(admins.includes(email));
+     console.log(partners.includes(email));
+
+    if (admins.includes(email)) {
+        // const user = userCredential.user;
         // Ya sea mandar el tipo de usuario al estado o al router para saber qué renderizar
-        console.log(user, 'Es un administrador')
+        console.log('Es un administrador')
     }
     
-    if (email.includes(partnersEmail)) {
-        const user = userCredential.user;
+    else if (partners.includes(email)) {
+        // const user = userCredential.user;
         // Ya sea mandar el tipo de usuario al estado o al router para saber qué renderizar
-        console.log(user, 'Es un aliado')
+        console.log('Es un aliado')
     }
     
 }
