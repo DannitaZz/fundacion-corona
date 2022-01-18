@@ -1,36 +1,38 @@
-import logo from './logo.svg';
-//import './App.css';
-// import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
-import Login from './components/auth/Login'
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-//const theme = unstable_createMuiStrictModeTheme();
-const theme = createTheme({
-  palette: {
-    type: "light",
-    primary: {
-      main: "#3f51b5",
-    },
-    secondary: {
-      main: '#eeb111',
-    },
-    text: {
-      primary: '#000000',
-      secondary: '#005295',
-      disabled: '#949ca1',
-    },
-    error: {
-      main: '#bf4c73',
-    },
-  },
-});
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
+import Login from './components/auth/Login';
+import Aliado from './components/pages/Aliado/Aliado';
+import Administrador from './components/pages/Administrador/Administrador';
+import InfoColegios from './components/pages/InfoColegios/InfoColegios';
+import MetodologiaOso from './components/pages/MetodologiaOso/MetodologiaOso';
+import ActulizacionInfo from './components/pages/MetodologiaOso/MetodologiaOso';
+import BancoHerramientas from './components/pages/BancoHerramientas/BancoHerramientas';
+import CrearColegio from './components/pages/CrearColegio/CrearColegio';
+import EditarColegio from './components/pages/EditarColegio/EditarColegio';
+import ConsultarColegio from './components/pages/ConsultarColegio/ConsultarColegio';
+
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-     <Login></Login>
-    </ThemeProvider>
-  );
+    
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="Aliado" element={<Aliado />} />
+          <Route path="Administrador" element={<Administrador/>} />
+          <Route path="InfoColegios" element={<InfoColegios/>} />
+          <Route path="MetodologiaOso" element={<MetodologiaOso/>} />
+          <Route path="ActulizacionInfo" element={<ActulizacionInfo/>} />
+          <Route path="BancoHerramientas" element={<BancoHerramientas/>} />
+          <Route path="CrearColegio" element={<CrearColegio/>} />
+          <Route path="EditarColegio" element={<EditarColegio/>} />
+          <Route path="ConsultarColegio" element={<ConsultarColegio/>} />
+        </Routes>
+      </BrowserRouter>
+  )
 }
 
 export default App;
+

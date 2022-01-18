@@ -2,17 +2,40 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals';  
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
   
 /> 
 
+const theme = createTheme({
+  palette: {
+    type: "light",
+    primary: {
+      main: "#3f51b5",
+    },
+    secondary: {
+      main: '#eeb111',
+    },
+    text: {
+      primary: '#000000',
+      secondary: '#005295',
+      disabled: '#949ca1',
+    },
+    error: {
+      main: '#bf4c73',
+    },
+  },
+});
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
