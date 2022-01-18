@@ -10,7 +10,8 @@ export const createUserPartner = (email, password) => {
       // Signed in
       const user = userCredential.user;
       const email = user.email;
-      createPartner(email);
+      const id = user.uid;
+      createPartner(email, id);
   
       // ...
     })
@@ -40,12 +41,12 @@ export const createUserAdmin = (email, password) => {
     });
 }
 
-
+export const userRol = { rol: '' };
 
 export const signIn = async (email, password) => {
     const auth = getAuth();
 
-    await signInWithEmailAndPassword(auth, email, password)
+    const userCredentials = await signInWithEmailAndPassword(auth, email, password)
     
     // Signed in
     const qPartners = await getPartners();
@@ -60,22 +61,20 @@ export const signIn = async (email, password) => {
     qAdmins.forEach((doc) => {
         admins.push(doc.data().email);
     });
-    console.log('Both', admins, partners);
-
-    console.log('Email', email);
-     console.log(admins.includes(email));
-     console.log(partners.includes(email));
 
     if (admins.includes(email)) {
-        // const user = userCredential.user;
-        //  mandar el tipo de usuario al estado
+        userRol.rol = 'admin';
+        const user = userCredentials.user;
+        console.log(user.uid);
         console.log('Es un administrador')
     }
     
     else if (partners.includes(email)) {
-        // const user = userCredential.user;
-        // mandar el tipo de usuario al estado 
+        // Setear al estado { rol: "partner"}
+        userRol.rol = 'partner';
+        const user = userCredentials.user;
+        console.log(user.uid)
         console.log('Es un aliado')
     }
-    
 }
+
