@@ -24,9 +24,9 @@ export const getSchool = async (pId, sId) => {
     return await getDoc(docRef);
 }
 
-export const updateSchool = async (pId, sId) => {
+export const updateSchool = async (pId, sId, updatedSchool) => {
     const docRef = doc(db,  'partners', pId, "schools", sId);
-    return await updateDoc(docRef)
+    return await updateDoc(docRef, updatedSchool)
 } 
 
 export const deleteSchool = async (pId, sId) => {
@@ -36,18 +36,88 @@ export const deleteSchool = async (pId, sId) => {
 
 // Aliados 
 
-export const updatePartner = async (aId, pId) => {
-    const docRef = doc(db, 'admins', aId, 'partners', pId);
-    return await updateDoc(docRef)
+export const createPartner = async (name, lastname,  email, tel) => {
+    return await addDoc(collection(db,'partners'), {
+        name,
+        lastname,
+        email,
+        tel,
+        
+    })
+}
+export const getPartners =  async (pId) => {
+    return await getDocs(collection(db, 'partners'));
 }
 
-// Urls
-
-export const getUrls =  async (aId, pId, sId) => {
-    return await getDocs(collection(db, 'admins', aId, 'partners', pId, 'schools', sId, 'urls'));
+export const getPartner = async (pId) => {
+    const docRef = doc(db, 'partners', pId);
+    return await getDoc(docRef);
+}
+export const updatePartner = async (pId, updatedPartner) => {
+    const docRef = doc(db, 'partners', pId);
+    return await updateDoc(docRef, updatedPartner);
 }
 
-// PDFs
+export const deletePartner = async (pId) => {
+    const docRef = doc(db, 'partners', pId);
+    return await deleteDoc(docRef)
+} 
+
+// Admins 
+export const createAdmin = async (name, lastname,  email, tel) => {
+    return await addDoc(collection(db,'admins'), {
+        name,
+        lastname,
+        email,
+        tel,
+        
+    })
+}
+export const getAdmins =  async (aId) => {
+    return await getDocs(collection(db, 'admins'));
+}
+
+export const getAdmin = async (aId) => {
+    const docRef = doc(db, 'admins', aId);
+    return await getDoc(docRef);
+}
+export const updateAdmin = async (aId, updatedAdmin) => {
+    const docRef = doc(db, 'admins', aId);
+    return await updateDoc(docRef, updatedAdmin);
+}
+
+export const deleteAdmin = async (aId) => {
+    const docRef = doc(db, 'admins', aId);
+    return await deleteDoc(docRef)
+} 
+
+// Urls (Power BI)
+export const createUrl = async (pId, sId, date, url) => {
+    return await addDoc(collection(db, 'partners', pId, 'schools', sId, 'urls'), {
+        date, 
+        url
+    })
+}
+export const getUrls =  async (pId, sId) => {
+    return await getDocs(collection(db,'partners', pId, 'schools', sId, 'urls'));
+}
+
+export const getUrl =  async (pId, sId, uId) => {
+    return await getDocs(collection(db,'partners', pId, 'schools', sId, 'urls', uId));
+}
+
+export const updateUrl = async (pId, sId, uId, updatedUrl) => {
+    const docRef = doc(db, 'partners', pId, 'schools', sId, 'urls', uId );
+    return await updateDoc(docRef, updatedUrl);
+}
+
+export const deleteUrl = async (pId, sId, uId, updatedUrl) => {
+    const docRef = doc(db, 'partners', pId, 'schools', sId, 'urls', uId );
+    return await deleteDoc(docRef);
+}
+
+
+// PDFs (pendiente)
 
 export const updloadPDF = async (pdf) => {
     const storageRef = storage.ref();
@@ -58,6 +128,34 @@ export const updloadPDF = async (pdf) => {
     // Se aconseja guardar este enlace en el estado para luego pasarlo a firestore
     return linkpdf
 };
+
+
+// Metodologias
+
+export const createMethodology = async (name, description,  url) => {
+    return await addDoc(collection(db,'methodology'), {
+        name,
+        description,
+        url,
+    })
+}
+export const getMethodologies =  async (mId) => {
+    return await getDocs(collection(db, 'methodologies'));
+}
+
+export const getMethodology = async (mId) => {
+    const docRef = doc(db, 'methodologies', mId);
+    return await getDoc(docRef);
+}
+export const updateMethodology = async (mId, updatedMethodology) => {
+    const docRef = doc(db, 'methodologies', mId);
+    return await updateDoc(docRef, updatedMethodology);
+}
+
+export const deleteMethodology = async (mId) => {
+    const docRef = doc(db, 'methodologies', mId);
+    return await deleteDoc(docRef)
+} 
 
 
 
