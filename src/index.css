@@ -5,10 +5,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e7ebf0;
+  background-color: var(--panton-427);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --panton-427: #e0e0e1;
+  --panton-430: #949ca1;
+  --panton-653: #005295;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
 }
