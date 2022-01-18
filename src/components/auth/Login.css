@@ -1,0 +1,19 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  width: 350px;
+}
+
+.logo-form {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  text-align: center;
+}
