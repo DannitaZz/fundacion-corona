@@ -68,13 +68,13 @@ export const signIn = async (email, password) => {
 
     if (admins.includes(email)) {
         // const user = userCredential.user;
-        // Ya sea mandar el tipo de usuario al estado o al router para saber qué renderizar
+        //  mandar el tipo de usuario al estado
         console.log('Es un administrador')
     }
     
     else if (partners.includes(email)) {
         // const user = userCredential.user;
-        // Ya sea mandar el tipo de usuario al estado o al router para saber qué renderizar
+        // mandar el tipo de usuario al estado 
         console.log('Es un aliado')
     }
     
