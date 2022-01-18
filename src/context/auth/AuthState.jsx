@@ -12,6 +12,7 @@ import {
 const AuthState = (props) => {
     const initialState = {
         user: null,
+        tipo: null,
         msj: null,
         auth: false
     }

@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import { AliadoContext } from "./AliadoContext";
 import { AliadoReducer } from "./AliadoReducer";
 
+import { getAuth } from "firebase/auth";
 import {
   GET_INFO_ALIADO,
   ACTUALIZAR_INFO_ALIADO,
@@ -9,6 +10,9 @@ import {
 } from "../../Types/index";
 
 const AliadoState = (props) => {
+
+  const auth = getAuth();
+  const userId = auth.currentUser;
 
   const initialState = {
       user: null,
@@ -19,7 +23,7 @@ const AliadoState = (props) => {
 
 
   const getUser = async () => {
-    
+
   }
   const updateUser = async () => {
 
