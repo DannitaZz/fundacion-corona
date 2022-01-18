@@ -1,0 +1,25 @@
+.menu-item {
+  width: 100%;
+}
+
+.menu-item a {
+  text-decoration: none;
+}
+
+.menuItem-container{
+  display: flex;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.menuItem-container img {
+ width: 80px;
+}
+
+.menuItem-container span {
+  font-size: 24px;
+  font-family: roboto;
+  color: var(--panton-653);
+}
+
+
