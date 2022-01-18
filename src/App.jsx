@@ -7,7 +7,7 @@ import Aliado from './components/pages/Aliado/Aliado';
 import Administrador from './components/pages/Administrador/Administrador';
 import InfoColegios from './components/pages/InfoColegios/InfoColegios';
 import MetodologiaOso from './components/pages/MetodologiaOso/MetodologiaOso';
-import ActulizacionInfo from './components/pages/MetodologiaOso/MetodologiaOso';
+import ActualizacionInfo from './components/pages/ActualizacionInfo/ActualizacionInfo';
 import BancoHerramientas from './components/pages/BancoHerramientas/BancoHerramientas';
 import CrearColegio from './components/pages/CrearColegio/CrearColegio';
 import EditarColegio from './components/pages/EditarColegio/EditarColegio';
@@ -24,7 +24,7 @@ function App() {
           <Route path="Administrador" element={<Administrador/>} />
           <Route path="InfoColegios" element={<InfoColegios/>} />
           <Route path="MetodologiaOso" element={<MetodologiaOso/>} />
-          <Route path="ActulizacionInfo" element={<ActulizacionInfo/>} />
+          <Route path="ActualizacionInfo" element={<ActualizacionInfo/>} />
           <Route path="BancoHerramientas" element={<BancoHerramientas/>} />
           <Route path="CrearColegio" element={<CrearColegio/>} />
           <Route path="EditarColegio" element={<EditarColegio/>} />
