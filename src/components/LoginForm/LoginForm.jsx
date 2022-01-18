@@ -1,5 +1,4 @@
 import React from 'react'
-import Box from '@mui/material/Box';
 import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -9,6 +8,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import { Box } from '@mui/system';
 
 import './LoginForm.css'
 
@@ -49,7 +49,6 @@ const LoginForm = () => {
           <Button variant="contained">Entrar</Button>
         </Stack>
       </form>
-
     </>
   )
 }

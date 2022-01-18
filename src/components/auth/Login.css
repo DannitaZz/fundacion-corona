@@ -1,19 +1,22 @@
 .page-container {
   display: flex;
-  justify-content: center;
+  justify-content:right;
+  margin-right: 10%;
+  margin-top: 15%;
   align-items: center;
-  height: 100vh;
 }
 
-.form-container {
-  width: 350px;
-}
-
-.logo-form {
-  display: flex;
-  flex-direction: column;
-}
 
 h3 {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
+
+}
+.page-c{
+  display: flex;
+  justify-content:left;
+  margin-right: 10%;
+  margin-left: 15%;
+  margin-top: 15%;
+  align-items: center;
 }
