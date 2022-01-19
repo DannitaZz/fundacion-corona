@@ -18,7 +18,6 @@
     width: 60vw;
     height: 70vh;
     margin: auto;
-    
 }
 .firstField {
     margin-top: 10%;
@@ -28,4 +27,8 @@
         width: 20vw;
         height: 50vh;
     }
+}
+
+form {
+    overflow-y: scroll;
 }
