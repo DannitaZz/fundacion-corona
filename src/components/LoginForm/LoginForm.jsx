@@ -29,7 +29,6 @@ const LoginForm = () => {
             }
           />
         </FormControl>
-
         <FormControl variant="standard">
           <InputLabel htmlFor="input-with-icon-adornment">
             Contraseña
