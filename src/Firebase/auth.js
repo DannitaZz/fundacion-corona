@@ -67,6 +67,7 @@ export const signIn = async (email, password) => {
         const user = userCredentials.user;
         console.log(user.uid);
         console.log('Es un administrador')
+        return true;
     }
     
     else if (partners.includes(email)) {
@@ -75,6 +76,8 @@ export const signIn = async (email, password) => {
         const user = userCredentials.user;
         console.log(user.uid)
         console.log('Es un aliado')
+        return true;
     }
+    return false;
 }
 

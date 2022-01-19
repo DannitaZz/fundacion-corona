@@ -16,10 +16,6 @@ import InfoMetodologia from './components/pages/InfoMetodologia/InfoMetodologia'
 import DocGestion from './components/pages/DocGestion/DocGestion';
 import Layout from './components/Layout/Layout';
 
-
-
-import AliadoState from "./context/aliado/AliadoState"
-
 function App() {
   return (
     <BrowserRouter>
