@@ -1,9 +1,20 @@
-.schools{
-    margin-left: 35%;
-    margin-right: 35%;
-    margin: 5px;
+body{
+    background-color: white;
+}
+.cardSchool{
+    margin-right: 25%;
+    margin-left: 25px;
+    margin-top: 10%;
+    padding: 15px;
+    width: 70%;
+    background-color: rgba(251, 253, 255, 0.986);
+    -webkit-box-shadow: 0px 0px 15px 6px rgba(144, 144, 144, 0.5); 
+    box-shadow: 0px 0px 15px 6px rgba(156, 156, 156, 0.5);;
     display: flex;
-    flex-direction:column-reverse;
+    border-radius: 3% ;
+    font-family: OpenSans,Helvetica,sans-serif;
+    font-size: x-large;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
     
@@ -11,9 +22,32 @@
 }
 .aggSchool{
     text-align: center;
-    margin-top: 5%;
+    position: relative;
+    flex-direction: column;
 }
-.title{
+.cardSchools{
+    width: 100%;
+    margin: auto;
+    margin-right: 25px;
+    display: grid;
+    flex-flow: row wrap;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.colegio{
+    color: var(—panton-653);
+    font-family: Open Sans;
+}
+.iconAdd{
+    background-color: rgba(105, 141, 194, 0.281);
+    margin-top: 20px;
+}
+.iconSearch, .iconDelete, .iconEdit{
+    color: #000;
+    margin-top: 10px;
+}
+.titleSchool h3{
+    color: #005295;
+    font-family: Open Sans;
     text-align: center;
-
-}
+    }

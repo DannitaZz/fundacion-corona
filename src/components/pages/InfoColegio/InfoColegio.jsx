@@ -15,8 +15,8 @@ export const InfoColegio = () => {
       <main>
         <div className="card-container">
           <div className="title">
-            <img src="./images/school-consul.png" alt="school" width="35px" height="45px" />
             <h3>Colegio San Jose</h3>
+            <img src="./images/school-consul.png" alt="school" width="35px" height="45px" />
           </div>
           <Card>
             <CardContent>
@@ -39,10 +39,10 @@ export const InfoColegio = () => {
               <div className="reportes-buttons">
                 <Button variant="outlined" startIcon={<PictureAsPdfIcon />}>
                   Año 2022
-              </Button>
+                </Button>
                 <Button variant="outlined" startIcon={<PictureAsPdfIcon />}>
                   Años Anteriores
-              </Button>
+                </Button>
               </div>
 
               <hr />
@@ -51,17 +51,17 @@ export const InfoColegio = () => {
               <div className="consulta-buttons">
                 <Button variant="outlined" startIcon={<LinkIcon />}>
                   Año 2022
-              </Button>
+                </Button>
                 <Button variant="outlined" startIcon={<LinkIcon />}>
                   Años Anteriores
-              </Button>
+                </Button>
               </div>
 
               <hr />
               <div className="notificacion-buttons">
                 <Button variant="contained" endIcon={<SendIcon />}>
                   Notificar encuesta
-              </Button>
+                </Button>
               </div>
             </CardContent>
           </Card>
