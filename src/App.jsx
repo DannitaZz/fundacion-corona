@@ -16,36 +16,13 @@ import InfoMetodologia from './components/pages/InfoMetodologia/InfoMetodologia'
 import DocGestion from './components/pages/DocGestion/DocGestion';
 import Layout from './components/Layout/Layout';
 
-
-
-import AliadoState from "./context/aliado/AliadoState"
-
 function App() {
   return (
-<<<<<<< HEAD
-    //<AliadoState>
-=======
->>>>>>> e873f03e973f0dc6a059a4a6413f183490ed3830
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route element={<Layout />}>
           <Route path="Aliado" element={<Aliado />} />
-<<<<<<< HEAD
-          <Route path="Administrador" element={<Administrador/>} />
-          <Route path="InfoColegio" element={<InfoColegio/>} />
-          <Route path="MetodologiaOso" element={<MetodologiaOso/>} />
-          <Route path="ActualizacionInfo" element={<ActualizacionInfo/>} />
-          <Route path="BancoHerramientas" element={<BancoHerramientas/>} />
-          <Route path="CrearColegio" element={<CrearColegio/>} />
-          <Route path="EditarColegio" element={<EditarColegio/>} />
-          <Route path="ConsultarColegio" element={<ConsultarColegio/>} />
-          <Route path="InfoMetodologia" element={<InfoMetodologia/>} />
-          <Route path='DocGestion' element={<DocGestion/>} />
-        </Routes>
-      </BrowserRouter>
-      //</AliadoState>
-=======
           <Route path="Administrador" element={<Administrador />} />
           <Route path="InfoColegio" element={<InfoColegio />} />
           <Route path="MetodologiaOso" element={<MetodologiaOso />} />
@@ -59,7 +36,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
->>>>>>> e873f03e973f0dc6a059a4a6413f183490ed3830
   )
 }
 
