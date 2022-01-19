@@ -30,15 +30,28 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const BackgLog = () => (
   <AutoPlaySwipeableViews>
-    <div>Recomendación de acceso
-                    Sr. usuario, tenga en cuenta que para acceder debe consultar con los administradores de la red los permisos </div>
-                  <div>Solicite su clave aquí en los siguientes casos:
 
-                    Si ha olvidado su clave.
-                    Si aún no tiene clave o no se ha registrado.
-                    Si se ha bloqueado su clave.</div>
-                  <div>Tips de seguridad
-                    Cuando seleccione una contraseña, asegúrese que sea fácil de recordar por usted pero dificil de descifrar por los demás.</div>
+      <div>
+        <p>
+          <h3>Recomendación de acceso</h3>
+          Sr. usuario, tenga en cuenta que para acceder debe consultar con los administradores de la red los permisos
+        </p>
+      </div>
+      <div>
+        <h3> Solicite su clave aquí en los siguientes casos</h3>
+        <p>
+          Si ha olvidado su clave.
+          Si aún no tiene clave o no se ha registrado.
+          Si se ha bloqueado su clave.
+        </p>
+      </div>
+      <div>
+        <h3>Tips de seguridad</h3>
+        <p>
+          Cuando seleccione una contraseña, asegúrese que sea fácil de recordar por usted pero dificil de descifrar por los demás.
+        </p>
+      </div>
+
   </AutoPlaySwipeableViews>
 );
 

@@ -9,10 +9,12 @@ import {
     CERRAR_SESION
 } from '../../Types/index.js';
 
+import { userRol } from "../../Firebase/auth";
+
 const AuthState = (props) => {
     const initialState = {
         user: null,
-        tipo: null,
+        tipo: userRol.rol,
         msj: null,
         auth: false
     }

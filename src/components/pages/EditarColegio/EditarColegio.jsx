@@ -1,5 +1,6 @@
 import React from 'react'
 import SchoolForm from '../../forms/Colegio';
+import EditName from './Edit';
 
 export const EditarColegio = () => {
   return (
@@ -8,5 +9,4 @@ export const EditarColegio = () => {
     </div>
   )
 }
-
 export default EditarColegio;
