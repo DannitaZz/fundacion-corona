@@ -6,8 +6,8 @@ import {db, storage} from './firebaseConfig';
 
 // Colegios
 
-export const createSchool = async (name, city, depto, email, tel, date,  pId, sId) => {
-    return await setDoc(collection(db,'partners', pId, 'schools', sId), {
+export const createSchool = async (name, city, depto, email, tel, date,  pId) => {
+    return await addDoc(collection(db,'partners', pId, 'schools'), {
         name,
         city,
         depto,
