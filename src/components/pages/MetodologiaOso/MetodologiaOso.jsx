@@ -16,7 +16,7 @@ export const MetodologiaOso = () => {
 
   return (
     <div>
-      <Header></Header>
+      
        <Box sx={{ width: '100%' }}>
       <Tabs
         value={value}

@@ -11,7 +11,7 @@ import SendIcon from '@mui/icons-material/Send';
 export const InfoColegio = () => {
   return (
     <div className="infoColegio">
-      <Header></Header>
+      
       <main>
         <div className="card-container">
           <div className="title">
