@@ -1,0 +1,42 @@
+.formContainerCreate{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.paperFormCreate {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 78vh;
+    margin: auto;
+    font-size: 20pt;
+    
+}
+.firstFieldCreate {
+    color: #005295;
+}
+@media (min-width: 1000px) {
+    .paperFormCreate {
+        width: 30vw;
+        height: 65vh;
+    }
+}
+
+form {
+    margin-top: 10%;
+    align-self: center;
+    justify-self: center;
+}
+
+h3 {
+    text-align: center;
+    color: #005295;
+}
+

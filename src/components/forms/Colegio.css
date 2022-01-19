@@ -4,7 +4,6 @@
     align-content: center;
     align-items: center;
     justify-self: center;
-    margin-top: 10%;
 }
 
 .paperForm {
@@ -18,9 +17,12 @@
     width: 60vw;
     height: 70vh;
     margin: auto;
+    padding-top: 5%;
+    font-size: 20pt;
+    
 }
 .firstField {
-    margin-top: 10%;
+    margin-top: 12%;
     color: #005295;
 }
 @media (min-width: 1000px) {
@@ -30,6 +32,11 @@
     }
 }
 
-form {
+/* form {
     overflow-y: scroll;
+} */
+
+h3 {
+    text-align: center;
+    color: #005295;
 }
