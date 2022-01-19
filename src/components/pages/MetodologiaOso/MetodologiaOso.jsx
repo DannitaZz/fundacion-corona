@@ -18,7 +18,8 @@ export const MetodologiaOso = () => {
     <div>
       
        <Box sx={{ width: '100%' }}>
-      <Tabs
+      <Tabs centered
+        className='nabvar'
         value={value}
         onChange={handleChange}
         textColor="secondary"
@@ -26,7 +27,8 @@ export const MetodologiaOso = () => {
         aria-label="secondary tabs example"
       >
         <Tab value="1" label="ORIENTACIÓN SOCIO OCUPACIONAL" />
-        <Tab value="2" label="DOCUMENTOS DE GESTIÓN" />
+        <Tab value="2" label="DOCUMENTOS PARA LA IMPLEMENTACIÓN" />
+        <Tab value="3" label="MATERIAL CARTILLAS FISICAS" />
       </Tabs>
        </Box>
        {(() => {switch (value) {
@@ -36,6 +38,9 @@ export const MetodologiaOso = () => {
                         case '2':
                             //Botón de "Listo" toma el tiempo en que se termina de preparar la orden
                             return <DocGestion></DocGestion>
+                        case '3':
+                            //Botón de "Listo" toma el tiempo en que se termina de preparar la orden
+                            return <DocGestion></DocGestion>    
                         default:
                             break;
                     }})()}
