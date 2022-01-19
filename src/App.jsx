@@ -12,7 +12,8 @@ import BancoHerramientas from './components/pages/BancoHerramientas/BancoHerrami
 import CrearColegio from './components/pages/CrearColegio/CrearColegio';
 import EditarColegio from './components/pages/EditarColegio/EditarColegio';
 import ConsultarColegio from './components/pages/ConsultarColegio/ConsultarColegio';
-
+import InfoMetodologia from './components/pages/InfoMetodologia/InfoMetodologia';
+import DocGestion from './components/pages/DocGestion/DocGestion';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           <Route path="CrearColegio" element={<CrearColegio/>} />
           <Route path="EditarColegio" element={<EditarColegio/>} />
           <Route path="ConsultarColegio" element={<ConsultarColegio/>} />
+          <Route path="InfoMetodologia" element={<InfoMetodologia/>} />
+          <Route path='DocGestion' element={<DocGestion/>} />
         </Routes>
       </BrowserRouter>
   )
