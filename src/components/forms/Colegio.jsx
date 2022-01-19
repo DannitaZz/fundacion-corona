@@ -45,7 +45,7 @@ const SchoolForm = () => {
 
     return (
         <>
-            <Header xs={12}></Header>
+            
             <div className='formContainer'>
                 <Card className="paperForm" elevation={3} >
                     <form onSubmit={formik.handleSubmit}>
