@@ -10,15 +10,16 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Box, Grid } from '@mui/material';
 import BackgLog from '../back/BackgLog';
-
-
+import Header from '../Header/Header'
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Login = () => {
   return (
     <>
-     <Header></Header>
+      <Header />
       <Grid container>
         <Grid items xs={12} sm={6}>
           <div className="page-container">

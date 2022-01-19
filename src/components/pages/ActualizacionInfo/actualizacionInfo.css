@@ -1,0 +1,38 @@
+.formulario{
+  margin:auto;
+  margin-top: 20px;
+  width: 60%;
+  height: auto;
+  background: var(--panton-427);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid var(--panton-653);
+}
+
+.divInputs{
+  margin:auto;
+  width:80%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+label{
+  font-size: 18px;
+  font-weight:400;
+  margin-bottom: 2px;
+  color: var(--panton-653);
+}
+
+input{
+  background-color: var(--panton-427);
+  height: 25px;
+  border-radius: 5px;
+}
+
+.errores{
+  color: rgb(170, 15, 15);
+  font-size:medium;
+}

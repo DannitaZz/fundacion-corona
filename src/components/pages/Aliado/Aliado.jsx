@@ -14,7 +14,7 @@ const Aliado = () => {
             <AliadosMenuItem link="ActulizacionInfo" img="images/actualizar.png" text="Actualizar información de contacto"></AliadosMenuItem>
           </div>
           <div className="menu-item-container">
-            <AliadosMenuItem link="InfoColegios" img="images/school.png" text="Información de colegios"></AliadosMenuItem>
+            <AliadosMenuItem link="ConsultarColegio" img="images/school.png" text="Información de colegios"></AliadosMenuItem>
           </div>
           <div className="menu-item-container">
             <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="Banco de herramientas"></AliadosMenuItem>
