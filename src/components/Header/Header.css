@@ -9,3 +9,27 @@
     background-color: var(--white);
    border-bottom: 1px solid gray;
 }
+.logout{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+.bienvenida{
+    width:120px;
+    height:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+
+h3{
+    display: inline;
+    margin-bottom: -15px;
+    text-transform: uppercase;
+}
+
+h6{
+    color:#005295
+}

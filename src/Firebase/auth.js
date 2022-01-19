@@ -43,6 +43,13 @@ export const createUserAdmin = (email, password) => {
 
 export const userRol = { rol: '' };
 
+export const getNameUser = ()=>{
+  const auth = getAuth();
+  const user = auth.currentUser; 
+  console.log(user)
+  return user.displayName; 
+}
+
 export const signIn = async (email, password) => {
     const auth = getAuth();
 
@@ -80,4 +87,6 @@ export const signIn = async (email, password) => {
     }
     return false;
 }
+
+
 
