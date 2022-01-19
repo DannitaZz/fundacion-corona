@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Card from '@mui/material/Card';
 import './CrearColegio.css'
 import { useFormik } from 'formik';
@@ -9,27 +8,6 @@ import { createSchool } from '../../../Firebase/functions';
 import validationSchema from '../../forms/validationSquema';
 
 const CrearColegio = () => {
-
-  /* const initialSchool = {
-    name: '',
-    city: '',
-    depto: '',
-    email: '',
-    tel: '',
-  }
-
-  const [school, setSchool] = useState(initialSchool);
-
-  useEffect(() => {
-    const callSchool = async () => {
-      const pId = 'lzbAlSzucQa3ELUbYMbCBddz6uk2';
-      const currentSchool = await getSchool(pId,'eeh1pXJZRaz4ILGRA4V9');
-      console.log(currentSchool.data().name);
-      setSchool(currentSchool.data());
-    }
-    callSchool();
-  }, []) */
-
 
     const formik = useFormik({
       
@@ -59,7 +37,7 @@ const CrearColegio = () => {
 
     return (
         <>
-            <h3>Actualizar información institucional</h3>
+            <h3>Ingresar información institucional</h3>
             <div className='formContainerCreate'>
                 <Card className="paperFormCreate" elevation={4} >
                     <form onSubmit={formik.handleSubmit}>

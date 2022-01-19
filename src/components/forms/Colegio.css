@@ -35,3 +35,8 @@
 /* form {
     overflow-y: scroll;
 } */
+
+h3 {
+    text-align: center;
+    color: #005295;
+}
