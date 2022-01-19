@@ -15,21 +15,30 @@ const ActualizacionInfo = () => {
         }}
         validate={(datos)=>{
           let errors={}
-          if(datos.nombre==""){
+          //validación de nombre
+          if(!datos.nombre){
             errors.nombre="Debe ingresar un nombre"
           } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(datos.nombre)){
             errors.nombre="El nombre debe terner más de 4 caracteres y solo puede contener letras y espacios"
           }
 
+          //validación de correo
+          if(!datos.correo){
+            errors.correo="Debe ingresar un correo electronico"
+          } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(datos.correo)){
+            errors.correo="Debe ingresar un correo valido"
+          }
+
           return errors;
         }}
-        onSubmit={(obj)=>{
+        onSubmit={(obj, {resetForm})=>{
           console.log(obj);
           //e.preventDefault();
           console.log("se evió el form")
+          resetForm();
         }}
       >
-        {({handleSubmit,errors,values,handleChange, handleBlur}) => (
+        {({handleSubmit,errors, touched, values,handleChange, handleBlur}) => (
           <form className="formulario" onSubmit={handleSubmit}>
             <div className="divInputs">
               <label htmlFor="name">Nombre:</label>
@@ -42,7 +51,7 @@ const ActualizacionInfo = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              {errors && <div>{errors.nombre}</div>}
+              {touched.nombre && errors.nombre && <div className="errores">{errors.nombre}</div>}
             </div>
             <div className="divInputs">
               <label htmlFor="apellido">Apellido:</label>
@@ -92,6 +101,7 @@ const ActualizacionInfo = () => {
                 onBlur={handleBlur}
               />
             </div>
+            {touched.correo && errors.correo && <div className="errores">{errors.correo}</div>}
             <button type="submit">Guardar</button>
           </form>
         )}
