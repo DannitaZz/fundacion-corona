@@ -1,4 +1,4 @@
-.formContainer{
+.formContainerCreate{
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -6,32 +6,32 @@
     justify-self: center;
 }
 
-.paperForm {
+.paperFormCreate {
     padding-left: 5%;
     padding-right: 5%;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
-    justify-self: center;
-    width: 60vw;
-    height: 70vh;
+    width: 70vw;
+    height: 78vh;
     margin: auto;
-    padding-top: 5%;
     font-size: 20pt;
     
 }
-.firstField {
-    margin-top: 12%;
+.firstFieldCreate {
     color: #005295;
 }
 @media (min-width: 1000px) {
-    .paperForm {
-        width: 20vw;
-        height: 50vh;
+    .paperFormCreate {
+        width: 30vw;
+        height: 65vh;
     }
 }
 
-/* form {
-    overflow-y: scroll;
-} */
+form {
+    margin-top: 10%;
+    align-self: center;
+    justify-self: center;
+}
+
