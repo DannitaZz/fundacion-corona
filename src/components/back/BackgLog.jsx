@@ -55,6 +55,6 @@ const BackgLog = () => (
       </div>
 
   </AutoPlaySwipeableViews>
-  )};
+  );
 
 export default BackgLog;

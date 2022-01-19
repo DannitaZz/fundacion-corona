@@ -1,17 +1,9 @@
 .page-container {
   display: flex;
-<<<<<<< HEAD
   justify-content:center;
   padding: 30px;
   align-items: center;
   margin: 30px;
-=======
-  justify-content:right;
-  margin-right: 10%;
-  margin-top: 15%;
-  align-items:flex-end;
-  
->>>>>>> develop
 }
 
 .page-container .login-form {
