@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Header.css";
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
           <img src="./images/logo.png" alt="logo" />
         </div>
         <div className="logout">
-          <span>x</span>
+        <ExitToAppIcon />
         </div>
       </header>
     </div>

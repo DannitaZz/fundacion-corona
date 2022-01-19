@@ -1,0 +1,12 @@
+.backgLog-text h3 {
+  color: var(--panton-653);
+  font-weight: bold;
+  text-align: center;
+  font-family: Open Sans;
+}
+
+.backgLog-text p {
+  color: var(--panton-640);
+  text-align: center;
+  font-family: Open Sans;
+}

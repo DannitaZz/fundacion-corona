@@ -15,18 +15,18 @@ export const InfoColegio = () => {
       <main>
         <div className="card-container">
           <div className="title">
-            <img src="./images/school.png" alt="school" width="35px" height="45px" />
+            <img src="./images/school-consul.png" alt="school" width="35px" height="45px" />
             <h3>Colegio San Jose</h3>
           </div>
           <Card>
             <CardContent>
               <h4>Información</h4>
               <ul>
-                <li>Dirección: cra 100 # 21-14</li>
-                <li>Ciudad: Bogotá</li>
-                <li>Departamento: Bogotá D,C</li>
-                <li>Correo Electrónico: colegiosanjose@gmail.com</li>
-                <li>Teléfono: 601-7145678</li>
+                <li><span><b> Dirección:</b>  Kra 100 # 21-14</span></li>
+                <li><span><b>Ciudad:</b>  Bogotá</span></li>
+                <li><span><b>Departamento:</b>  Bogotá D,C</span></li>
+                <li><span><b>Correo Electrónico:</b>  colegiosanjose@gmail.com</span></li>
+                <li><span><b>Teléfono:</b>  7145678</span></li>
               </ul>
             </CardContent>
           </Card>

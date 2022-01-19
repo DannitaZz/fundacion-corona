@@ -8,7 +8,8 @@ import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import { Box } from '@mui/system';
+
+
 
 import './LoginForm.css'
 
@@ -16,6 +17,7 @@ const LoginForm = () => {
   return (
     <>
       <form className="loginForm">
+        
         <FormControl variant="standard">
           <InputLabel htmlFor="input-with-icon-adornment">
             Correo
@@ -29,6 +31,8 @@ const LoginForm = () => {
             }
           />
         </FormControl>
+        <br />
+        
         <FormControl variant="standard">
           <InputLabel htmlFor="input-with-icon-adornment">
             Contraseña
@@ -43,13 +47,12 @@ const LoginForm = () => {
             }
           />
         </FormControl>
-
-        <Stack spacing={2} direction="row">
+        <div className="button-form">
           <Button variant="contained">Entrar</Button>
-        </Stack>
+        </div>
       </form>
     </>
   )
 }
 
-export default LoginForm
+export default LoginForm;

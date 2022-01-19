@@ -6,9 +6,10 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { getSchools } from '../../../Firebase/functions';
 import Header from '../../Header/Header';
+import './ConsultarColegio.css';
 
 
-const SearchSchool = () => {
+const ConsultarColegio = () => {
   const [schools, setSchools] = useState([]);
 
   useEffect(() => {
@@ -51,4 +52,4 @@ const SearchSchool = () => {
     </div>
   )
 }
-export default SearchSchool;
+export default ConsultarColegio;

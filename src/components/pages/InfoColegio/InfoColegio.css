@@ -9,11 +9,15 @@
 }
 
 .infoColegio .card-container {
-  width: 60%;
+  width: 50%;
 }
 
 .infoColegio h4 {
   margin: 5px 0;
+  font-family: Open Sans;
+  font-weight: bold;
+  text-align: center;
+
 }
 
 .infoColegio hr {
@@ -25,6 +29,14 @@
   display: flex;
   gap: 10px;
 }
+
+.infoColegio .card-container .title h3 {
+  font-family: Open Sans;
+  font-weight: bold;
+  color: var(--panton-653);
+  
+}
+
 
 .infoColegio .reportes-buttons {
   display: flex;
@@ -55,9 +67,17 @@
 .infoColegio ul li {
   list-style: none;
   padding: 5px;
+  font-family: Open Sans;
+  text-align: justify;
 }
 
 .infoColegio .notificacion-buttons {
   display: flex;
   justify-content: center;
+}
+
+.card-container h4 {
+  font-family: Open Sans;
+  font-weight: bold;
+  text-align: center;
 }

@@ -9,3 +9,7 @@
 .menu .menu-item-container {
   width: 350px;
 }
+
+.menu .menu-item-container span {
+  font-family: Open Sans;
+}

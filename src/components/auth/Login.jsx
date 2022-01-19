@@ -6,30 +6,28 @@ import CardContent from '@mui/material/CardContent';
 import NameApp from '../Title/NameApp';
 import { Box, Grid } from '@mui/material';
 import BackgLog from '../back/BackgLog';
-
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
+// const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Login = () => {
   return (
     <>
-      <NameApp />
-      <Grid container>
-        <Grid items xs={12} sm={6}>
+    
           <div className="page-container">
             <Card>
               <CardContent>
+                <img src="./images/logo.png" alt="logo" />
                 <h3>Iniciar sesión</h3>
-                <div>
+                <div className="login-form">
                   <LoginForm />
                 </div>
               </CardContent>
             </Card>
           </div>
-        </Grid>
-        <Grid items xs={12} sm={6}>
+        
           <div className="page-c">
             <Card>
               <CardContent>
@@ -37,8 +35,7 @@ const Login = () => {
               </CardContent>
             </Card>
           </div>
-        </Grid>
-      </Grid>
+        
     </>
 
   );
