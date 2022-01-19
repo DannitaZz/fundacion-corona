@@ -1,0 +1,17 @@
+.schools{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin: 5px;
+    display: flex;
+    flex-direction:column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+.aggSchool{
+    text-align: center;
+    margin-top: 5%;
+}
+.title{
+    text-align: center;
+
+}

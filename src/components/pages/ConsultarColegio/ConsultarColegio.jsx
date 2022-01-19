@@ -1,11 +1,12 @@
 import React from 'react';
-import NameApp from '../../Title/NameApp';
 import IconAdd from './IconAdd';
 import IconSchool from './IconSchool';
 import { useEffect, useState } from "react";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { getSchools } from '../../../Firebase/functions';
+import Header from '../../Header/Header';
+
 
 const SearchSchool = () => {
   const [schools, setSchools] = useState([]);
@@ -26,19 +27,15 @@ const SearchSchool = () => {
     callSchools();
   }, [])
   return (
-    <div>
-      <NameApp />
-      <div>
-        <h4>Aliado</h4>
-      </div>
+    <div className='searchSchool'>
+      <Header />
       <div>
         <h3>COLEGIOS</h3>
       </div>
-      <div>
-        <h4>Agregar Colegio</h4>
+      <div className='newSchools'>
         <IconAdd />
       </div>
-      <div>
+      <div className='schools'>
         {
           schools && schools.map((item) => (
             <Card key={item.pId}>

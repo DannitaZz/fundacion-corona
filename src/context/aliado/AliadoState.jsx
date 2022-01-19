@@ -9,6 +9,8 @@ import {
   ELIMINAR_ALIADO
 } from "../../Types/index";
 
+import { userRol } from "../../Firebase/auth"; 
+
 const AliadoState = (props) => {
 
   const auth = getAuth();
@@ -23,6 +25,7 @@ const AliadoState = (props) => {
 
 
   const getUser = async () => {
+
 
   }
   const updateUser = async () => {

@@ -31,3 +31,8 @@ input{
   height: 25px;
   border-radius: 5px;
 }
+
+.errores{
+  color: rgb(170, 15, 15);
+  font-size:medium;
+}
