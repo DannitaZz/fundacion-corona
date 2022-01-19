@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
+import Header from "../../Header/Header";
 import "./actualizacionInfo.css";
 
 const ActualizacionInfo = () => {
@@ -7,6 +8,10 @@ const ActualizacionInfo = () => {
   
   return (
     <>
+      <Header/>
+      <div className="title">
+        <h2>Actualice su Información</h2>
+      </div>
       <Formik
         initialValues={{
           nombre:"",
@@ -48,7 +53,7 @@ const ActualizacionInfo = () => {
                 type="text"
                 id="name"
                 name="nombre"
-                placeholder="Su nombre"
+                placeholder=""
                 value={values.nombre}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -61,7 +66,7 @@ const ActualizacionInfo = () => {
                 type="text"
                 id="apellido"
                 name="apellido"
-                placeholder="Sus apellidos"
+                placeholder=""
                 value={values.apellido}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -73,7 +78,7 @@ const ActualizacionInfo = () => {
                 type="text"
                 id="direccion"
                 name="direccion"
-                placeholder="Su direccion"
+                placeholder=""
                 value={values.direccion}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -85,7 +90,7 @@ const ActualizacionInfo = () => {
                 type="number"
                 id="telefono"
                 name="telefono"
-                placeholder="Su número telefonico"
+                placeholder=""
                 value={values.telefono}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -97,7 +102,7 @@ const ActualizacionInfo = () => {
                 type="email"
                 id="correo"
                 name="correo"
-                placeholder="Su correo"
+                placeholder=""
                 value={values.correo}
                 onChange={handleChange}
                 onBlur={handleBlur}

@@ -1,14 +1,31 @@
 .formulario{
   margin:auto;
-  margin-top: 20px;
+  margin-top: 30px;
   width: 60%;
   height: auto;
-  background: var(--panton-427);
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   padding: 10px;
-  border: 1px solid var(--panton-653);
+  padding-top: 20px;
+  -webkit-box-shadow: 0px 0px 15px 6px rgba(0,0,0,0.5); 
+  box-shadow: 0px 0px 15px 6px rgba(0,0,0,0.5);
 }
+
+.title{
+  margin: auto;
+  width: 60%;
+}
+
+h2{
+  margin: auto;
+  margin-top: 40px;
+  color:var(--panton-653);
+  font-size: 25px;
+  font-weight: 500;
+  text-align:center;
+}
+
 
 .divInputs{
   margin:auto;
@@ -27,9 +44,23 @@ label{
 }
 
 input{
-  background-color: var(--panton-427);
+  background: #FFFFFF;
   height: 25px;
-  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid var(--panton-653);
+  font-size: 20px;
+  color: var(--panton-430);
+  font-weight:400;
+}
+
+button{
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width:40%;
+  font-size:20px;
+  background-color:var(--panton-653);
+  color:#FFFFFF;
 }
 
 .errores{
