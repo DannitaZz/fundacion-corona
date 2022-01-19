@@ -8,7 +8,7 @@ import DocGestion from '../DocGestion/DocGestion';
 
 
 export const MetodologiaOso = () => {
-  const [value, setValue] = React.useState('one');
+  const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
