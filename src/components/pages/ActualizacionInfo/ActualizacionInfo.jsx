@@ -3,6 +3,8 @@ import { Formik } from "formik";
 import "./actualizacionInfo.css";
 
 const ActualizacionInfo = () => {
+
+  
   return (
     <>
       <Formik

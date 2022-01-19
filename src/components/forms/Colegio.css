@@ -21,6 +21,7 @@
 }
 .firstField {
     margin-top: 10%;
+    color: #005295;
 }
 @media (min-width: 1000px) {
     .paperForm {
