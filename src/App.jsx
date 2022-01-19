@@ -15,9 +15,11 @@ import ConsultarColegio from './components/pages/ConsultarColegio/ConsultarColeg
 import InfoMetodologia from './components/pages/InfoMetodologia/InfoMetodologia';
 import DocGestion from './components/pages/DocGestion/DocGestion';
 
+import AliadoState from "./context/aliado/AliadoState"
+
 function App() {
   return (
-    
+    //<AliadoState>
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
@@ -34,6 +36,7 @@ function App() {
           <Route path='DocGestion' element={<DocGestion/>} />
         </Routes>
       </BrowserRouter>
+      //</AliadoState>
   )
 }
 

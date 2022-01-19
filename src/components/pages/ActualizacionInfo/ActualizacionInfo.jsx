@@ -1,11 +1,35 @@
 import React from "react";
+import { useEffect, useContext, useState } from "react";
+//import AliadoContext from "../../../context/aliado/AliadoContext";
+import { getPartner, updatePartner } from "../../../Firebase/functions";
 import { Formik } from "formik";
 import Header from "../../Header/Header";
 import "./actualizacionInfo.css";
 
 const ActualizacionInfo = () => {
 
-  
+  //const {getUser}= useContext(AliadoContext);
+  const [usuario, setUsuario]=useState(
+    {
+      name:"",
+      apellido:"",
+      direccion:"",
+      telefono:"",
+      email: "",
+    }    
+  )
+
+  const cargarUsuario = async ()=>{
+    const user = await getPartner();
+    //console.log(user.data());
+    setUsuario(user.data())
+    //console.log(usuario);
+  }
+
+  useEffect(()=>{
+      cargarUsuario()
+    },[]
+  );
   return (
     <>
       <Header/>
@@ -13,27 +37,22 @@ const ActualizacionInfo = () => {
         <h2>Actualice su Información</h2>
       </div>
       <Formik
-        initialValues={{
-          nombre:"",
-          apellido:"",
-          direccion:"",
-          telefono:"",
-          correo:"",
-        }}
+        initialValues={usuario}
+        enableReinitialize={ true }
         validate={(datos)=>{
           let errors={}
           //validación de nombre
-          if(!datos.nombre){
-            errors.nombre="Debe ingresar un nombre"
-          } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(datos.nombre)){
+          if(!datos.name){
+            errors.name="Debe ingresar un nombre"
+          } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(datos.name)){
             errors.nombre="El nombre debe terner más de 4 caracteres y solo puede contener letras y espacios"
           }
 
           //validación de correo
-          if(!datos.correo){
+          if(!datos.email){
             errors.correo="Debe ingresar un correo electronico"
-          } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(datos.correo)){
-            errors.correo="Debe ingresar un correo valido"
+          } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(datos.email)){
+            errors.email="Debe ingresar un correo valido"
           }
 
           return errors;
@@ -42,6 +61,7 @@ const ActualizacionInfo = () => {
           console.log(obj);
           //e.preventDefault();
           console.log("se evió el form")
+          updatePartner(obj);
           resetForm();
         }}
       >
@@ -52,13 +72,13 @@ const ActualizacionInfo = () => {
               <input
                 type="text"
                 id="name"
-                name="nombre"
-                placeholder=""
-                value={values.nombre}
+                name="name"
+                placeholder={usuario.name}
+                value={values.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              {touched.nombre && errors.nombre && <div className="errores">{errors.nombre}</div>}
+              {touched.name && errors.name && <div className="errores">{errors.name}</div>}
             </div>
             <div className="divInputs">
               <label htmlFor="apellido">Apellido:</label>
@@ -66,7 +86,7 @@ const ActualizacionInfo = () => {
                 type="text"
                 id="apellido"
                 name="apellido"
-                placeholder=""
+                placeholder={usuario.apellido}
                 value={values.apellido}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -78,7 +98,7 @@ const ActualizacionInfo = () => {
                 type="text"
                 id="direccion"
                 name="direccion"
-                placeholder=""
+                placeholder={usuario.direccion}
                 value={values.direccion}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -90,25 +110,25 @@ const ActualizacionInfo = () => {
                 type="number"
                 id="telefono"
                 name="telefono"
-                placeholder=""
+                placeholder={usuario.telefono}
                 value={values.telefono}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
             </div>
             <div className="divInputs">
-              <label htmlFor="correo">Correo:</label>
+              <label htmlFor="email">Correo:</label>
               <input
                 type="email"
-                id="correo"
-                name="correo"
-                placeholder=""
-                value={values.correo}
+                id="email"
+                name="email"
+                placeholder={usuario.email}
+                value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
             </div>
-            {touched.correo && errors.correo && <div className="errores">{errors.correo}</div>}
+            {touched.email && errors.email && <div className="errores">{errors.email}</div>}
             <button type="submit">Guardar</button>
           </form>
         )}
