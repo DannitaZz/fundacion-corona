@@ -46,13 +46,11 @@ const SchoolForm = () => {
     return (
         <>
             <Header xs={12}></Header>
-            <div className="inFormik">
-                    <EditName />
-            </div>
             <div className='formContainer'>
                 <Card className="paperForm" elevation={3} >
                     <form onSubmit={formik.handleSubmit}>
-                        <div className="firstField">
+                        <p>Modificar información institucional</p>
+                        <div>
                             <TextField
                                 id="Nombre"
                                 name="Nombre"

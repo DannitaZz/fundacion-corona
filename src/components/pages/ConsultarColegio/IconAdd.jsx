@@ -1,7 +1,7 @@
 import React from "react";
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import '../../../index.js'
-import './Consultar.css';
+import './consultar.css';
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import { Link } from 'react-router-dom';
