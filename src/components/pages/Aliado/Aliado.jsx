@@ -7,7 +7,7 @@ import AliadosMenuItem from '../../AliadosMenuItem/AliadosMenuItem'
 const Aliado = () => {
   return (
     <div className="Aliado-container">
-      <Header></Header>
+      
       <main>
         <div className="menu">
           

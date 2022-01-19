@@ -8,7 +8,7 @@ const ActualizacionInfo = () => {
   
   return (
     <>
-      <Header/>
+      
       <div className="title">
         <h2>Actualice su Información</h2>
       </div>

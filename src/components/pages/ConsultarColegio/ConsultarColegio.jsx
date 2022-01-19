@@ -29,7 +29,7 @@ const ConsultarColegio = () => {
   }, [])
   return (
     <div className='searchSchool'>
-      <Header />
+      
       <div>
         <h3>COLEGIOS</h3>
       </div>

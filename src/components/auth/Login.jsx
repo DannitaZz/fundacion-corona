@@ -18,7 +18,6 @@ import BackgLog from '../back/BackgLog';
 const Login = () => {
   return (
     <>
-    
           <div className="page-container">
             <Card variant="outlined">
               <CardContent>
