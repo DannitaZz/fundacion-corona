@@ -1,9 +1,10 @@
 import React from 'react'
+import SchoolForm from '../../forms/Colegio';
 
 export const CrearColegio = () => {
   return (
     <div>
-      crear
+      <SchoolForm />
     </div>
   )
 }
