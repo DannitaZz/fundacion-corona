@@ -1,6 +1,11 @@
 import React from 'react'
 import './Login.css'
 import LoginForm from '../LoginForm/LoginForm';
+import Header from '../Header/Header'
+
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Box, Grid } from '@mui/material';
@@ -39,7 +44,6 @@ const Login = () => {
         </Grid>
       </Grid>
     </>
-
   );
 }
 export default Login;
