@@ -1,4 +1,4 @@
-
+import React, { useState } from "react";
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
@@ -14,26 +14,28 @@ import EditarColegio from './components/pages/EditarColegio/EditarColegio';
 import ConsultarColegio from './components/pages/ConsultarColegio/ConsultarColegio';
 import InfoMetodologia from './components/pages/InfoMetodologia/InfoMetodologia';
 import DocGestion from './components/pages/DocGestion/DocGestion';
+import Layout from './components/Layout/Layout';
 
 function App() {
   return (
-    
     <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route element={<Layout />}>
           <Route path="Aliado" element={<Aliado />} />
-          <Route path="Administrador" element={<Administrador/>} />
-          <Route path="InfoColegio" element={<InfoColegio/>} />
-          <Route path="MetodologiaOso" element={<MetodologiaOso/>} />
-          <Route path="ActualizacionInfo" element={<ActualizacionInfo/>} />
-          <Route path="BancoHerramientas" element={<BancoHerramientas/>} />
-          <Route path="CrearColegio" element={<CrearColegio/>} />
-          <Route path="EditarColegio" element={<EditarColegio/>} />
-          <Route path="ConsultarColegio" element={<ConsultarColegio/>} />
-          <Route path="InfoMetodologia" element={<InfoMetodologia/>} />
-          <Route path='DocGestion' element={<DocGestion/>} />
-        </Routes>
-      </BrowserRouter>
+          <Route path="Administrador" element={<Administrador />} />
+          <Route path="InfoColegio" element={<InfoColegio />} />
+          <Route path="MetodologiaOso" element={<MetodologiaOso />} />
+          <Route path="ActualizacionInfo" element={<ActualizacionInfo />} />
+          <Route path="BancoHerramientas" element={<BancoHerramientas />} />
+          <Route path="CrearColegio" element={<CrearColegio />} />
+          <Route path="EditarColegio" element={<EditarColegio />} />
+          <Route path="ConsultarColegio" element={<ConsultarColegio />} />
+          <Route path="InfoMetodologia" element={<InfoMetodologia />} />
+          <Route path='DocGestion' element={<DocGestion />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

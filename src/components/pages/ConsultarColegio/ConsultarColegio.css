@@ -14,6 +14,13 @@ body{
     border-radius: 3% ;
     font-family: OpenSans,Helvetica,sans-serif;
     font-size: x-large;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.aggSchool{
     text-align: center;
     position: relative;
     flex-direction: column;

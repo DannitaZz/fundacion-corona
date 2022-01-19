@@ -6,7 +6,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import EditName from "../pages/EditarColegio/Edit";
+
 
 
 const validationSchema = yup.object({
@@ -45,11 +45,10 @@ const SchoolForm = () => {
 
     return (
         <>
-            <Header xs={12}></Header>
+            
             <div className='formContainer'>
                 <Card className="paperForm" elevation={3} >
                     <form onSubmit={formik.handleSubmit}>
-                        <p>Modificar información institucional</p>
                         <div>
                             <TextField
                                 id="Nombre"

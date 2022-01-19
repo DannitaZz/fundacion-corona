@@ -25,9 +25,9 @@ const ConsultarColegio = () => {
   }, [])
 
   return (
-    <div className='searchSchool'>
       <div className='titleSchool'>
       <img src="./images/school-consul.png" alt="school" width="35px" height="45px" />
+      <div>
         <h3>COLEGIOS</h3>
       </div>
       <div className='newSchools'>

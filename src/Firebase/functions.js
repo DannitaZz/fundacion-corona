@@ -1,11 +1,13 @@
 import { collection, setDoc, addDoc, getDocs, getDoc, doc, updateDoc, deleteDoc } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+
 // import { ref, getDownloadURL } from "firebase/storage";
 import {db, storage} from './firebaseConfig';
 
 // Colegios
 
-export const createSchool = async (name, city, depto, email, tel, date,  pId, sId) => {
-    return await setDoc(collection(db,'partners', pId, 'schools', sId), {
+export const createSchool = async (name, city, depto, email, tel, date,  pId) => {
+    return await addDoc(collection(db,'partners', pId, 'schools'), {
         name,
         city,
         depto,
@@ -49,12 +51,16 @@ export const getPartners =  async () => {
     return await getDocs(collection(db, 'partners'));
 }
 
-export const getPartner = async (pId) => {
-    const docRef = doc(db, 'partners', pId);
+export const getPartner = async () => {
+    const auth = getAuth();
+    const user = auth.currentUser;  
+    const docRef = doc(db, 'partners', "lzbAlSzucQa3ELUbYMbCBddz6uk2");
     return await getDoc(docRef);
 }
-export const updatePartner = async (pId, updatedPartner) => {
-    const docRef = doc(db, 'partners', pId);
+export const updatePartner = async (updatedPartner) => {
+    const auth = getAuth();
+    const user = auth.currentUser;  
+    const docRef = doc(db, 'partners', "lzbAlSzucQa3ELUbYMbCBddz6uk2");
     return await updateDoc(docRef, updatedPartner);
 }
 

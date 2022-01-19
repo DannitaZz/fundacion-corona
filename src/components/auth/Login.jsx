@@ -18,9 +18,8 @@ import BackgLog from '../back/BackgLog';
 const Login = () => {
   return (
     <>
-    
           <div className="page-container">
-            <Card>
+            <Card variant="outlined">
               <CardContent>
                 <img src="./images/logo.png" alt="logo" />
                 <h3>Iniciar sesión</h3>
@@ -32,7 +31,7 @@ const Login = () => {
           </div>
         
           <div className="page-c">
-            <Card>
+            <Card variant="outlined">
               <CardContent>
                 <BackgLog></BackgLog>
               </CardContent>
