@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import './Colegio.css'
+import EditName from "../pages/EditarColegio/Edit";
 
 export const SchoolForm = () => {
 
@@ -16,6 +17,10 @@ export const SchoolForm = () => {
             <div className='formContainer'>
                 <Card className="paperForm" elevation={3} >
 
+                <div className="inFormik">
+                    <EditName />
+                </div>
+      
                 <div className="firstField">
                     <TextField id="standard-basic" label="Nombre" variant="standard"  />
                 </div>
