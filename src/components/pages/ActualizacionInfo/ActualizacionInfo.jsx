@@ -1,13 +1,9 @@
 import React from "react";
-import { useEffect, useContext, useState } from "react";
+import { useEffect,  useState } from "react";
 import { useNavigate } from "react-router-dom";
-//import AliadoContext from "../../../context/aliado/AliadoContext";
 import { getPartner, updatePartner } from "../../../Firebase/functions";
 import { Formik } from "formik";
-import Header from "../../Header/Header";
 import "./actualizacionInfo.css";
-import { Link } from "react-router-dom";
-
 
 const ActualizacionInfo = () => {
 
@@ -149,7 +145,7 @@ const ActualizacionInfo = () => {
               />
             </div>
             {touched.email && errors.email && <div className="errores">{errors.email}</div>}
-            <Link to="/Aliado"><button type="submit">Guardar</button></Link>
+            <button type="submit">Guardar</button>
           </form>
         )}
       </Formik>

@@ -7,8 +7,6 @@ import Button from '@mui/material/Button';
 import { getSchool, updateSchool } from '../../../Firebase/functions';
 import validationSchema from '../../forms/validationSquema';
 import { useParams } from 'react-router-dom';
-import { Link } from "react-router-dom";
-
 
 const EditarColegio = () => {
   const {sId} = useParams();
@@ -45,7 +43,7 @@ const EditarColegio = () => {
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            alert(JSON.stringify(values, null, 2));
+            alert('Actualizado exitosamente');
             const pId = 'lzbAlSzucQa3ELUbYMbCBddz6uk2';
             const sId = 'eeh1pXJZRaz4ILGRA4V9';
             const objValues = {name: values.Nombre, city: values.Ciudad, depto: values.Depto, email: values.email, tel: values.tel, }
@@ -127,11 +125,10 @@ const EditarColegio = () => {
                             />
                         </div>
                         <br></br>
-                        <Link to="/ConsultarColegio">
+                        
                         <Button color="primary" className="btn-send" variant="contained" type="submit">
                             Enviar
                         </Button>
-                        </Link>
                     </form>
                 </Card>
             </div>
