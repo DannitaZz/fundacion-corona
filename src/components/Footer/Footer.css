@@ -1,0 +1,11 @@
+
+.footer {
+    background-color: rgb(2, 2, 2);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+}
+.inforTitle{
+   position: relative;
+}

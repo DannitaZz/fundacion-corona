@@ -4,6 +4,7 @@ import IconSchool from './IconSchool';
 import { useEffect, useState } from "react";
 import { getSchools } from '../../../Firebase/functions';
 import './ConsultarColegio.css';
+import Footer from '../../Footer/Footer';
 
 const ConsultarColegio = () => {
   const [schools, setSchools] = useState([]);
@@ -25,9 +26,9 @@ const ConsultarColegio = () => {
   }, [])
 
   return (
-      <div className='titleSchool'>
-      <img src="./images/school-consul.png" alt="school" width="35px" height="45px" />
-      <div>
+    <div className='titleSchool'>
+      <div className='imgSchool'>
+        <img src="./images/school-consul.png" alt="school" width="35px" height="45px" />
         <h3>COLEGIOS</h3>
       </div>
       <div className='newSchools'>
@@ -43,6 +44,9 @@ const ConsultarColegio = () => {
           )
           )
         }
+        <div className='footer'>
+          <Footer />
+        </div>
       </div>
     </div>
 
