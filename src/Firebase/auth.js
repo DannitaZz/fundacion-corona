@@ -1,11 +1,12 @@
 import { getAuth,signOut,
-  createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+  createUserWithEmailAndPassword, signInWithEmailAndPassword, setPersistence, browserSessionPersistence } from "firebase/auth";
 import { createAdmin, createPartner, getAdmins, getPartners } from "./functions";
 
 
 export const createUserPartner = (email, password) => {
     
     const auth = getAuth();
+    
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
@@ -53,7 +54,7 @@ export const getNameUser = ()=>{
 
 export const signIn = async (email, password) => {
     const auth = getAuth();
-
+    await setPersistence(auth, browserSessionPersistence);
     const userCredentials = await signInWithEmailAndPassword(auth, email, password)
     
     // Signed in
