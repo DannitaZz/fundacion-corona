@@ -1,9 +1,16 @@
 .containerCard{
+    width: 100%;
     height: 100vh;
-    display: grid;
-   justify-content:stretch;
-   grid-auto-flow: dense;
-   padding: 5% 10% 5% 10%;
+    
+    padding: 5% 10% 5% 10%;
+}
+
+.menu-item-container{
+  margin: auto;
+  width: 100%;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px; 
 }
 
 .cardDocs{

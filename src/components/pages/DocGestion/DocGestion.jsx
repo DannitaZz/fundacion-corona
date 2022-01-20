@@ -32,7 +32,8 @@ const DocMetodologia = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Grid container className="ContainerCard">
-            <DocumentCard img="images/segRectores.png" title="Seguimiento Rectores" link=''></DocumentCard>
+              <div className="menu-item-container">
+              <DocumentCard img="images/segRectores.png" title="Seguimiento Rectores" link=''></DocumentCard>
             <DocumentCard img="images/lbase.png" title="Línea Base y Seguimiento" link=''></DocumentCard>
             <DocumentCard img="images/lsalida.png" title="Línea de Salida" link=''></DocumentCard>
             <DocumentCard img="images/logros.png" title="Formato Metas y alcances" link=''></DocumentCard>
@@ -41,6 +42,7 @@ const DocMetodologia = () => {
             <DocumentCard img="images/guiaD.png" title="3_Guías Décimo" link=''></DocumentCard>
             <DocumentCard img="images/guiaO.png" title="4_Guías Once" link=''></DocumentCard>
             <DocumentCard img="images/herramientas.png" title="correo Seguimiento periódico" link=''></DocumentCard>
+              </div>
             </Grid>
           </AccordionDetails>
         </Accordion>

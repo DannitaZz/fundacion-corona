@@ -5,7 +5,8 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import InfoMetodologia from '../InfoMetodologia/InfoMetodologia';
 import DocGestion from '../DocGestion/DocGestion';
-import MatCartillas from '../MatCartillas/MatCartillas'
+import MatCartillas from '../MatCartillas/MatCartillas';
+import "./MetodologiaOso.css"
 
 
 export const MetodologiaOso = () => {
@@ -27,9 +28,9 @@ export const MetodologiaOso = () => {
         indicatorColor="secondary"
         aria-label="secondary tabs example"
       >
-        <Tab value="1" label="ORIENTACIÓN SOCIO OCUPACIONAL" />
-        <Tab value="2" label="DOCUMENTOS PARA LA IMPLEMENTACIÓN" />
-        <Tab value="3" label="MATERIAL CARTILLAS FISICAS" />
+        <Tab className="tabs-menu" value="1" label="ORIENTACIÓN SOCIO OCUPACIONAL" />
+        <Tab className="tabs-menu" value="2" label="DOCUMENTOS PARA LA IMPLEMENTACIÓN" />
+        <Tab className="tabs-menu" value="3" label="MATERIAL CARTILLAS FISICAS" />
       </Tabs>
        </Box>
        {(() => {switch (value) {
