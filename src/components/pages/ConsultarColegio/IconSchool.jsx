@@ -5,23 +5,24 @@ import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Stack from '@mui/material/Stack';
 import { Link } from 'react-router-dom';
+import './ConsultarColegio.css';
 
-const IconSchool = () => {
+const IconSchool = ({sId}) => {
     return (
         <>
-            <Stack direction="row" spacing={5}>
-                <Link to="/InfoColegio">
+            <Stack spacing={3} direction='row' className='iconos'>
+                <Link to={`/InfoColegio/${sId}`}>
                     <IconButton aria-label="search">
-                        <SearchIcon></SearchIcon>
+                        <SearchIcon className='iconSearch'></SearchIcon>
                     </IconButton>
                 </Link>
-                <Link to="/EditarColegio">
+                <Link to={`/EditarColegio/${sId}`}>
                 <IconButton aria-label="edit">
-                    <ModeEditIcon></ModeEditIcon>
+                    <ModeEditIcon className='iconEdit'></ModeEditIcon>
                 </IconButton>
                 </Link>
                 <IconButton aria-label="delete">
-                    <DeleteIcon></DeleteIcon>
+                    <DeleteIcon className='iconDelete'></DeleteIcon>
                 </IconButton>
             </Stack>
         </>

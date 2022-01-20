@@ -45,3 +45,7 @@ p {
     display: flex;
     justify-content: center;
 }
+
+.infoMetodology{
+    text-align:justify;
+}

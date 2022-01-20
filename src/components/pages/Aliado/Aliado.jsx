@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Aliado.css";
-import Header from '../../Header/Header'
 import AliadosMenuItem from '../../AliadosMenuItem/AliadosMenuItem'
 
 
