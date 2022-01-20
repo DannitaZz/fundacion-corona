@@ -3,6 +3,7 @@
    flex-flow: row wrap;
    height: 500px;
    justify-content: center;
+   margin-bottom: 10%;
 }
 
 .containerCard .banktoolcard-btn {
