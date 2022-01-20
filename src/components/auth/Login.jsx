@@ -20,7 +20,7 @@ const Login = () => {
     <>
           <div className="page-container">
             <Card variant="outlined">
-              <CardContent>
+              <CardContent className="container-login">
                 <img src="./images/logo.png" alt="logo" />
                 <h3>Iniciar sesión</h3>
                 <div className="login-form">
