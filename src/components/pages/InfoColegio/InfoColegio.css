@@ -8,8 +8,20 @@
   gap: 40px;
 }
 
+.titulo{
+  margin:auto;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction:column;
+}
+
 .infoColegio .card-container {
+
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .infoColegio h4 {
@@ -25,13 +37,15 @@
   margin: 15px 0;
 }
 
-.infoColegio .card-container .title {
-  display: flex;
-  gap: 10px;
+.infoColegio .card-container .titulo img{
+  margin:auto;
+  width: 50px;
+  height: 50px;
 }
 
-.infoColegio .card-container .title h3 {
+.infoColegio .card-container .titulo h3 {
   font-family: Open Sans;
+  font-size: 25px;
   font-weight: bold;
   color: var(--panton-653);
   

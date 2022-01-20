@@ -9,6 +9,8 @@ import LinkIcon from '@mui/icons-material/Link';
 import SendIcon from '@mui/icons-material/Send';
 import { useParams } from 'react-router-dom';
 import { getSchool } from '../../../Firebase/functions';
+import imgSchool from '../../../images/school-consul.png'
+
 
 export const InfoColegio = () => {
   const {sId} = useParams();
@@ -18,8 +20,8 @@ export const InfoColegio = () => {
 
   useEffect(() => {
     const callSchool = async () => {
-      const pId = 'lzbAlSzucQa3ELUbYMbCBddz6uk2';
-      const currentSchool = await getSchool(pId, sId);
+      
+      const currentSchool = await getSchool(sId);
       console.log(currentSchool.data().name);
       setSchool(currentSchool.data());
     }
@@ -30,9 +32,9 @@ export const InfoColegio = () => {
       
       <main>
         <div className="card-container">
-          <div className="title">
-            <h3>{school && school.name}</h3>
-            <img src="./images/school-consul.png" alt="school" width="35px" height="45px" />
+          <div className="titulo">
+          <img src={imgSchool} alt="school" width="35px" height="45px" />
+          <h3>{school && school.name}</h3>            
           </div>
           <Card>
             <CardContent>

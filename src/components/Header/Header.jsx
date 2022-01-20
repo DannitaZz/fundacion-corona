@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./Header.css";
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import { getNameUser, userRol } from '../../Firebase/auth';
+import { getNameUser, userRol, closeSesion } from '../../Firebase/auth';
 import { getPartner, getAdmin } from '../../Firebase/functions';
 
 const Header = () => {
 
+  const navigateTo = useNavigate();
   const [name, setName] = useState("")
 
   const rol = userRol.rol;
@@ -28,6 +30,11 @@ const Header = () => {
     
     
   },[])
+
+  const salir = async () => {
+    await closeSesion()
+    navigateTo("/")
+  }
   return (
     <div>
       <header className="header">
@@ -38,7 +45,7 @@ const Header = () => {
           <h3>{name}</h3>
           <div className="logout">
             <h4>Salir</h4>
-            <ExitToAppIcon />
+            <ExitToAppIcon onClick={salir} />
           </div>
         </div>        
       </header>
