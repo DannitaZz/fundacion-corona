@@ -13,6 +13,7 @@ const ActualizacionInfo = () => {
     {
       name:"",
       apellido:"",
+      institucion:"",
       direccion:"",
       telefono:"",
       email: "",
@@ -93,6 +94,18 @@ const ActualizacionInfo = () => {
               />
             </div>
             <div className="divInputs">
+              <label htmlFor="institucion">Institución:</label>
+              <input
+                type="text"
+                id="institucion"
+                name="institucion"
+                placeholder={usuario.institucion}
+                value={values.institucion}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+            </div>
+            <div className="divInputs">
               <label htmlFor="direccion">Direccion:</label>
               <input
                 type="text"
@@ -117,7 +130,7 @@ const ActualizacionInfo = () => {
               />
             </div>
             <div className="divInputs">
-              <label htmlFor="email">Correo:</label>
+              <label htmlFor="email">Correo Insitucional:</label>
               <input
                 type="email"
                 id="email"

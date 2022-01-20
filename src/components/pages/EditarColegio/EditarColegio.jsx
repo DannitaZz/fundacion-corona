@@ -6,9 +6,11 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { getSchool, updateSchool } from '../../../Firebase/functions';
 import validationSchema from '../../forms/validationSquema';
+import { useParams } from 'react-router-dom';
 
 const EditarColegio = () => {
-
+  const {sId} = useParams();
+  console.log('EL ID del colegio', sId);
   const initialSchool = {
     name: '',
     city: '',
@@ -22,7 +24,7 @@ const EditarColegio = () => {
   useEffect(() => {
     const callSchool = async () => {
       const pId = 'lzbAlSzucQa3ELUbYMbCBddz6uk2';
-      const currentSchool = await getSchool(pId,'eeh1pXJZRaz4ILGRA4V9');
+      const currentSchool = await getSchool(pId, sId);
       console.log(currentSchool.data().name);
       setSchool(currentSchool.data());
     }

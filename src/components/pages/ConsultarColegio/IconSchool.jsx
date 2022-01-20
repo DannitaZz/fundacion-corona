@@ -7,16 +7,16 @@ import Stack from '@mui/material/Stack';
 import { Link } from 'react-router-dom';
 import './ConsultarColegio.css';
 
-const IconSchool = () => {
+const IconSchool = ({sId}) => {
     return (
         <>
             <Stack spacing={3} direction='row' className='iconos'>
-                <Link to="/InfoColegio">
+                <Link to={`/InfoColegio/${sId}`}>
                     <IconButton aria-label="search">
                         <SearchIcon className='iconSearch'></SearchIcon>
                     </IconButton>
                 </Link>
-                <Link to="/EditarColegio">
+                <Link to={`/EditarColegio/${sId}`}>
                 <IconButton aria-label="edit">
                     <ModeEditIcon className='iconEdit'></ModeEditIcon>
                 </IconButton>

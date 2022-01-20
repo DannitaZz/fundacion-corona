@@ -16,8 +16,9 @@ const ConsultarColegio = () => {
       let arraySchools = [];
       const qSchools = await getSchools(pId);
       qSchools.forEach((doc) => {
-        arraySchools.push(doc.data());
+        arraySchools.push(doc);
         console.log(doc.data());
+        console.log(doc.id);
       });
       setSchools(arraySchools);
     }
@@ -31,14 +32,14 @@ const ConsultarColegio = () => {
         <h3>COLEGIOS</h3>
       </div>
       <div className='newSchools'>
-        <IconAdd />
+        <IconAdd  />
       </div>
       <div className='cardSchools'>
         {
           schools && schools.map((item) => (
-            <div key={item.pId} className='cardSchool'>
-              <h2 className='colegio'>Colegio {item.name}</h2>
-              <IconSchool />
+            <div key={item.id} className='cardSchool' id={item.id}>
+              <h2 className='colegio'>Colegio {item.data().name} </h2>
+              <IconSchool  sId={item.id}/>
             </div>
           )
           )
