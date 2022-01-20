@@ -11,13 +11,13 @@
     -webkit-box-shadow: 0px 14px 20px 0px #949CA1; 
     box-shadow: 0px 14px 20px 0px #949CA1;
 }
-.logout{
+.logout {
     display: flex;
     justify-content:flex-end;
     align-items: center;
 }
 
-.bienvenida{
+.bienvenida {
     width:120px;
     height:60px;
     display:flex;
@@ -26,13 +26,13 @@
     align-items: center;
 }
 
-h3{
+.bienvenida h3 {
     display: inline;
     margin-bottom: -15px;
-    text-transform: uppercase;
+    font-family: Open Sans;
 }
 
-h6{
+.bienvenida h6 {
     color:#005295
 }
 
