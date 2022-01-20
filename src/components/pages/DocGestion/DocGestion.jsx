@@ -7,7 +7,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AliadosMenuItem from '../../AliadosMenuItem/AliadosMenuItem'
-
+import DocumentCard from '../../DocumentCard/DocumentCard'
 
 
 const DocMetodologia = () => {
@@ -16,12 +16,12 @@ const DocMetodologia = () => {
        <div className="ContainerAccordion">
        <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-            <h2>DOCUMENTOS DE ARTICULACIÓN CON LAS INSTITUCIONES</h2>
+            <h2>ARTICULACIÓN CON LAS INSTITUCIONES</h2>
           </AccordionSummary>
           <AccordionDetails>
             <Grid container>
             <div className="menu-item-container">
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="Carta de compromisos_IE_Rector"></AliadosMenuItem>
+            <DocumentCard img="images/herramientas.png" title="Carta de compromisos_IE_Rector" link="BancoHerramientas"></DocumentCard>
             <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="Carta consentimiento informado_IE_Rector"></AliadosMenuItem>
             </div> 
             </Grid>
@@ -29,7 +29,7 @@ const DocMetodologia = () => {
         </Accordion>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
-          <h2>DOCUMENTOS PARA EL DESARROLLO DEL PROGRAMA</h2>
+          <h2>DESARROLLO DE PROGRAMAS</h2>
           </AccordionSummary>
           <AccordionDetails>
             <Grid container>
