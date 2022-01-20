@@ -14,6 +14,7 @@ export const createSchool = async (name, city, depto, email, tel, date,  pId) =>
         email,
         tel,
         date,
+        surveyMonkey: false,
     })
 }
 
