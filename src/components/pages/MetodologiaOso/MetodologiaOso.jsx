@@ -28,9 +28,9 @@ export const MetodologiaOso = () => {
         indicatorColor="secondary"
         aria-label="secondary tabs example"
       >
-        <Tab className="tabs-menu" value="1" label="ORIENTACIÓN SOCIO OCUPACIONAL" />
-        <Tab className="tabs-menu" value="2" label="DOCUMENTOS PARA LA IMPLEMENTACIÓN" />
-        <Tab className="tabs-menu" value="3" label="MATERIAL CARTILLAS FISICAS" />
+        <Tab className="tabs-menu" value="1" label="Orientación socio ocupacional" />
+        <Tab className="tabs-menu" value="2" label="Documentos para la implementación" />
+        <Tab className="tabs-menu" value="3" label="Material cartillas físicas" />
       </Tabs>
        </Box>
        {(() => {switch (value) {

@@ -44,10 +44,10 @@ const ConsultarColegio = () => {
           )
           )
         }
-        <div className='footer'>
+      </div>
+      <div className='footer'>
           <Footer />
         </div>
-      </div>
     </div>
 
   )

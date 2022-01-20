@@ -1,5 +1,5 @@
 body{
-    background-color: white;
+    background-color: rgb(233, 233, 233);
 }
 .cardSchool{
     margin-right: 25%;
@@ -7,9 +7,9 @@ body{
     margin-top: 10%;
     padding: 15px;
     width: 70%;
-    background-color: rgba(251, 253, 255, 0.986);
+    background-color: rgba(255, 254, 254, 0.986);
     -webkit-box-shadow: 0px 0px 15px 6px rgba(144, 144, 144, 0.5); 
-    box-shadow: 0px 0px 15px 6px rgba(156, 156, 156, 0.5);;
+    box-shadow: 0px 0px 5px 6px rgba(170, 170, 170, 0.5);;
     display: flex;
     border-radius: 10%;
     font-family: OpenSans,Helvetica,sans-serif;
@@ -38,14 +38,11 @@ body{
     width: 90%;
     margin: auto;
     /*margin-right: 25px;*/
+    padding-bottom: 70px;
     display: grid;
     flex-flow: row wrap;
     /*grid-template-columns: 33% 33% 33%;*/
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-}
-.footer{
-    position: relative;
-    padding-bottom: 3em;
 }
 .colegio{
     color: var(—panton-653);
@@ -54,9 +51,12 @@ body{
 .iconAdd{
     margin-top: 20px;
 }
-.iconSearch, .iconDelete, .iconEdit{
+.iconSearch, .iconEdit, .iconDelete{
     color: #000;
     margin-top: 10px;
+}
+.desing{
+    color: #005295;
 }
 
 .titulo{
