@@ -59,12 +59,6 @@ const ConsultarColegio = () => {
           )
         }
       </div>
-<<<<<<< HEAD
-      <div className='footer'>
-        <Footer />
-      </div>
-=======
->>>>>>> ae801a0254d9a4b074726900da761a0a8388a198
     </div>
 
   )
