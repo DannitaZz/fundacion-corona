@@ -9,7 +9,7 @@ import './ConsultarColegio.css';
 export default function IconAdd() {
     return (
         <Box sx={{ '& > :not(style)': { m: 1 }}}>
-            <Fab variant="extended" className="iconAdd">
+            <Fab  variant="extended" className="iconAdd">
                 <Link to="/CrearColegio">
                         <AddCircleIcon sx={{ mr: 1 }} />
                         Agregar Nuevo Colegio

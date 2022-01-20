@@ -23,8 +23,8 @@ const EditarColegio = () => {
 
   useEffect(() => {
     const callSchool = async () => {
-      const pId = 'lzbAlSzucQa3ELUbYMbCBddz6uk2';
-      const currentSchool = await getSchool(pId, sId);
+      
+      const currentSchool = await getSchool(sId);
       console.log(currentSchool.data().name);
       setSchool(currentSchool.data());
     }

@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 //import AliadoContext from "../../../context/aliado/AliadoContext";
 import { getPartner, updatePartner } from "../../../Firebase/functions";
 import { Formik } from "formik";
@@ -7,6 +8,8 @@ import Header from "../../Header/Header";
 import "./actualizacionInfo.css";
 
 const ActualizacionInfo = () => {
+
+  const navigateTo = useNavigate()
 
   //const {getUser}= useContext(AliadoContext);
   const [usuario, setUsuario]=useState(
@@ -64,6 +67,8 @@ const ActualizacionInfo = () => {
           console.log("se evió el form")
           updatePartner(obj);
           resetForm();
+          navigateTo("/aliado")
+          
         }}
       >
         {({handleSubmit,errors, touched, values,handleChange, handleBlur}) => (

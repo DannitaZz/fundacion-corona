@@ -3,6 +3,7 @@ import IconAdd from './IconAdd';
 import IconSchool from './IconSchool';
 import { useEffect, useState } from "react";
 import { getSchools } from '../../../Firebase/functions';
+import imgSchool from '../../../images/school-consul.png'
 import './ConsultarColegio.css';
 import Footer from '../../Footer/Footer';
 
@@ -11,11 +12,9 @@ const ConsultarColegio = () => {
 
   useEffect(() => {
     const callSchools = async () => {
-      const pId = 'lzbAlSzucQa3ELUbYMbCBddz6uk2';
-      /* await createSchool('Inmaculada', 'Pradera', 'Valle', 'email', 'tel', 'date', pId);
-      console.log('Colegio creado'); */
+      
       let arraySchools = [];
-      const qSchools = await getSchools(pId);
+      const qSchools = await getSchools();
       qSchools.forEach((doc) => {
         arraySchools.push(doc);
         console.log(doc.data());
@@ -27,11 +26,11 @@ const ConsultarColegio = () => {
   }, [])
 
   return (
-    <div className='titleSchool'>
-      <div className='imgSchool'>
- 
-        <h3>COLEGIOS</h3>
-      </div>
+      <div className='titleSchool'>
+        <div className="titulo">
+          <img src={imgSchool} alt="school" width="35px" height="45px" />
+          <h3>COLEGIOS</h3>      
+        </div>
       <div className='newSchools'>
         <IconAdd  />
       </div>

@@ -1,4 +1,5 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth,signOut,
+  createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { createAdmin, createPartner, getAdmins, getPartners } from "./functions";
 
 
@@ -88,5 +89,9 @@ export const signIn = async (email, password) => {
     return false;
 }
 
+export const closeSesion = async () => {
+  const auth = getAuth();
+  return await signOut(auth)
 
+}
 

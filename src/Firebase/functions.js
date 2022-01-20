@@ -18,12 +18,16 @@ export const createSchool = async (name, city, depto, email, tel, date,  pId) =>
     })
 }
 
-export const getSchools =  async (pId) => {
-    return await getDocs(collection(db, 'partners',  pId, 'schools'));
+export const getSchools =  async () => {
+    const auth = getAuth();
+    const user = auth.currentUser; 
+    return await getDocs(collection(db, 'partners',  user.uid, 'schools'));
 }
 
-export const getSchool = async (pId, sId) => {
-    const docRef = doc(db, 'partners', pId, "schools", sId);
+export const getSchool = async (sId) => {
+    const auth = getAuth();
+    const user = auth.currentUser; 
+    const docRef = doc(db, 'partners', user.uid, "schools", sId);
     return await getDoc(docRef);
 }
 

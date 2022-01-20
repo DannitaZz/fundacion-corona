@@ -28,14 +28,20 @@ body{
     position: relative;
     flex-direction: column;
 }
+
+.newSchools{
+    width: 90%;
+    margin-left: 7%;
+}
+
 .cardSchools{
-    width: 100%;
+    width: 90%;
     margin: auto;
-    margin-right: 25px;
+    /*margin-right: 25px;*/
     display: grid;
     flex-flow: row wrap;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    /*grid-template-columns: 33% 33% 33%;*/
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 .footer{
     position: relative;
@@ -46,15 +52,26 @@ body{
     font-family: Open Sans;
 }
 .iconAdd{
-    background-color: rgba(105, 141, 194, 0.281);
     margin-top: 20px;
 }
 .iconSearch, .iconDelete, .iconEdit{
     color: #000;
     margin-top: 10px;
 }
+
+.titulo{
+    margin-top: 20px;
+}
+
+.titulo img{
+    margin:auto;
+    width: 50px;
+    height: 50px;
+}
+
 .titleSchool h3{
     color: #005295;
+    font-size: 25px;
     font-family: Open Sans;
     text-align: center;
 }
