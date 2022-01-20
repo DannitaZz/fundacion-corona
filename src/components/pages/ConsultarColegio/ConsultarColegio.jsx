@@ -29,7 +29,7 @@ const ConsultarColegio = () => {
   return (
     <div className='titleSchool'>
       <div className='imgSchool'>
-        <img src="./images/school-consul.png" alt="school" width="35px" height="45px" />
+ 
         <h3>COLEGIOS</h3>
       </div>
       <div className='newSchools'>

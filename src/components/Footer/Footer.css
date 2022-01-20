@@ -1,11 +1,17 @@
-
-.footer {
-    background-color: rgb(2, 2, 2);
+.body h3{
     color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.body{
+    position: relative;
+    padding-bottom: 3em;
+}
+.footer {
+    background-color: #1D1E21;
+    padding: 1em 0;
     position: absolute;
     bottom: 0;
-    width: 100%; 
-}
-.inforTitle{
-   position: relative;
+    width: 100%;
+    height: 5%;
 }

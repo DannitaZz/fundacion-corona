@@ -20,8 +20,7 @@ body{
 }
 .imgSchool{
     justify-content: center;
-    display: flex;
-    flex-direction: row;
+
 }
 
 .aggSchool{
