@@ -36,7 +36,10 @@ export const updateSchool = async (pId, sId, updatedSchool) => {
     return await updateDoc(docRef, updatedSchool)
 } 
 
-export const deleteSchool = async (pId, sId) => {
+export const deleteSchool = async (sId) => {
+    const auth = getAuth();
+    const user = auth.currentUser;
+    const pId = user.uid;
     const docRef = doc(db, 'partners', pId, "schools", sId);
     return await deleteDoc(docRef)
 } 

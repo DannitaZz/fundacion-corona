@@ -8,6 +8,7 @@ import './ConsultarColegio.css';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Delete from '@mui/icons-material/Delete';
+import { deleteSchool } from '../../../Firebase/functions';
 
 const IconSchool = ({ sId }) => {
     return (
@@ -26,11 +27,9 @@ const IconSchool = ({ sId }) => {
                         <ModeEditIcon className='iconEdit'></ModeEditIcon>
                     </IconButton>
                 </Link>
-                <Link to={`/${sId}`}>
                     <IconButton aria-label="edit">
-                        <Delete className='iconDelete'></Delete>
+                        <Delete className='iconDelete' onClick={()=> {deleteSchool(sId)}}></Delete>
                     </IconButton>
-                </Link>
             </Stack>
         </>
     )
