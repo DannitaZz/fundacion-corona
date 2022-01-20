@@ -40,7 +40,7 @@ const Header = () => {
     <div>
       <header className="header">
         <div className="brand">
-        <Link to="Aliados">
+        <Link to="Aliado">
           <img className="logo" src="./images/logo.png" alt="logo" />
         </Link>  
         </div>
