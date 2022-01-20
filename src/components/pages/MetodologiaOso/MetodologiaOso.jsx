@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import InfoMetodologia from '../InfoMetodologia/InfoMetodologia';
 import DocGestion from '../DocGestion/DocGestion';
+import MatCartillas from '../MatCartillas/MatCartillas'
 
 
 export const MetodologiaOso = () => {
@@ -40,7 +41,7 @@ export const MetodologiaOso = () => {
                             return <DocGestion></DocGestion>
                         case '3':
                             //Botón de "Listo" toma el tiempo en que se termina de preparar la orden
-                            return <DocGestion></DocGestion>    
+                            return <MatCartillas />    
                         default:
                             break;
                     }})()}

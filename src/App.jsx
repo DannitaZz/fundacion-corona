@@ -14,6 +14,7 @@ import EditarColegio from './components/pages/EditarColegio/EditarColegio';
 import ConsultarColegio from './components/pages/ConsultarColegio/ConsultarColegio';
 import InfoMetodologia from './components/pages/InfoMetodologia/InfoMetodologia';
 import DocGestion from './components/pages/DocGestion/DocGestion';
+import MatCartillas from './components/pages/MatCartillas/MatCartillas'
 import Layout from './components/Layout/Layout';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="ConsultarColegio" element={<ConsultarColegio />} />
           <Route path="InfoMetodologia" element={<InfoMetodologia />} />
           <Route path='DocGestion' element={<DocGestion />} />
+          <Route path='MatCartillas' element={<MatCartillas />} /> 
         </Route>
       </Routes>
     </BrowserRouter>
