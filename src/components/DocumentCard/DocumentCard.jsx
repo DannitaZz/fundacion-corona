@@ -1,15 +1,18 @@
-import React from 'react';
-import "./DocumentCard.css"
+import React from "react";
+import "./DocumentCard.css";
 
-
-const DocumentCard = (img, title, link) => {
-  return <div>
-              <div className="cardDocuments"> 
-               <h2>{title}</h2>
-               <link rel="stylesheet" href={`./${link}`} />
-               <img src={`./${img}`} alt="" width="35px" height="45px" />
-               </div>
-  </div>;
+const DocumentCard = ({ img, title, link }) => {
+  return (
+    <div>
+      <div className="cardDocuments">
+        <img src={`./${img}`} alt="" width="35px" height="45px" />
+        <h5>{title}</h5>
+        <a target="_blank" href={`./${link}`}>
+          Descargar
+        </a>
+      </div>
+    </div>
+  );
 };
 
 export default DocumentCard;
