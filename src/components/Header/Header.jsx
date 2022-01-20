@@ -39,7 +39,9 @@ const Header = () => {
     <div>
       <header className="header">
         <div className="brand">
+        <Link to="/Aliados">
           <img className="logo" src="./images/logo.png" alt="logo" />
+        </Link>  
         </div>
         <div className="bienvenida">
           <h3>{name}</h3>
