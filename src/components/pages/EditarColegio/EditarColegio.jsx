@@ -56,7 +56,7 @@ const EditarColegio = () => {
 
     return (
         <>
-            <h3>Actualizar información institucional</h3>
+            <h3 className='tittleForm'>Actualizar información institucional</h3>
             <div className='formContainer'>
                 <Card className="paperForm" elevation={4} >
                     <form onSubmit={formik.handleSubmit}>

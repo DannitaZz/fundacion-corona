@@ -36,7 +36,7 @@ const CrearColegio = () => {
 
     return (
         <>
-            <h3 className='title-form'>Ingresar información institucional</h3>
+            <h3 className='title-form'> Ingresar información institucional</h3>
             <div className='formContainerCreate'>
                 <Card className="paperFormCreate" elevation={4} >
                     <form onSubmit={formik.handleSubmit}>

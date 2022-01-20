@@ -34,6 +34,8 @@
     margin-bottom:30px;
     font-size: 25px;
     font-weight: bold;
+    color: #005295;
+    text-align: center;
 }
 
 .btn-send{
@@ -46,14 +48,9 @@
     }
 }
 
-form {
+.paperFormCreate form {
     margin-top: 10%;
     align-self: center;
     justify-self: center;
-}
-
-h3 {
-    text-align: center;
-    color: #005295;
 }
 
