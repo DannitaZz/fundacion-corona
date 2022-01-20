@@ -8,7 +8,7 @@ import { db } from '../../../Firebase/firebaseConfig';
 import { getAuth } from 'firebase/auth';
 import imgSchool from '../../../images/school-consul.png'
 import './ConsultarColegio.css';
-import Footer from '../../Footer/Footer';
+
 
 const ConsultarColegio = () => {
   const [schools, setSchools] = useState([]);
@@ -59,9 +59,12 @@ const ConsultarColegio = () => {
           )
         }
       </div>
+<<<<<<< HEAD
       <div className='footer'>
         <Footer />
       </div>
+=======
+>>>>>>> ae801a0254d9a4b074726900da761a0a8388a198
     </div>
 
   )

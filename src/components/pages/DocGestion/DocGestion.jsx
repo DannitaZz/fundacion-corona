@@ -11,7 +11,7 @@ import { Box } from "@mui/system";
 const DocMetodologia = () => {
   return (
     <>
-       <Box width='90%' mx='auto' mt={6}> 
+       <Box width='90%' mx='auto' mt={6} mb={28} > 
        <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
             <Typography fontFamily='Open Sans' variant="h5">Documentos de articulación con las instituciones</Typography>
