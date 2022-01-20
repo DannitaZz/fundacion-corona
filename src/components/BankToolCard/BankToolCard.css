@@ -1,9 +1,7 @@
-.btnPdf{
-    display: flex;
-    justify-content: center;
-}
-
 .cardDocs h3{
     text-align: center;
     font-family: Open Sans;
-}
+    font-weight: 12px;
+} 
+
+

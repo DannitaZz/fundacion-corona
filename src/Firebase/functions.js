@@ -14,6 +14,7 @@ export const createSchool = async (name, city, depto, email, tel, date,  pId) =>
         email,
         tel,
         date,
+        surveyMonkey: false,
     })
 }
 
@@ -54,13 +55,13 @@ export const getPartners =  async () => {
 export const getPartner = async () => {
     const auth = getAuth();
     const user = auth.currentUser;  
-    const docRef = doc(db, 'partners', "lzbAlSzucQa3ELUbYMbCBddz6uk2");
+    const docRef = doc(db, 'partners', user.uid);
     return await getDoc(docRef);
 }
 export const updatePartner = async (updatedPartner) => {
     const auth = getAuth();
     const user = auth.currentUser;  
-    const docRef = doc(db, 'partners', "lzbAlSzucQa3ELUbYMbCBddz6uk2");
+    const docRef = doc(db, 'partners', user.uid);
     return await updateDoc(docRef, updatedPartner);
 }
 
@@ -83,8 +84,10 @@ export const getAdmins =  async () => {
     return await getDocs(collection(db, 'admins'));
 }
 
-export const getAdmin = async (aId) => {
-    const docRef = doc(db, 'admins', aId);
+export const getAdmin = async () => {
+    const auth = getAuth();
+    const user = auth.currentUser;
+    const docRef = doc(db, 'admins', user.uid);
     return await getDoc(docRef);
 }
 export const updateAdmin = async (aId, updatedAdmin) => {

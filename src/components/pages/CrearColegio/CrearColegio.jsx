@@ -8,7 +8,6 @@ import { createSchool } from '../../../Firebase/functions';
 import validationSchema from '../../forms/validationSquema';
 
 const CrearColegio = () => {
-
     const formik = useFormik({
       
         initialValues: {

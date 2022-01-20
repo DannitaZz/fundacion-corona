@@ -8,19 +8,19 @@ import { Link } from 'react-router-dom';
 import './ConsultarColegio.css';
 import BookmarkSharpIcon from '@mui/icons-material/BookmarkSharp';
 
-const IconSchool = () => {
+const IconSchool = ({sId}) => {
     return (
         <>
         <div  className='desing'>
         <BookmarkSharpIcon/>
         </div>
             <Stack spacing={3} direction='row' className='iconos'>
-                <Link to="/InfoColegio">
+                <Link to={`/InfoColegio/${sId}`}>
                     <IconButton aria-label="search">
                         <SearchIcon className='iconSearch'></SearchIcon>
                     </IconButton>
                 </Link>
-                <Link to="/EditarColegio">
+                <Link to={`/EditarColegio/${sId}`}>
                 <IconButton aria-label="edit">
                     <ModeEditIcon className='iconEdit'></ModeEditIcon>
                 </IconButton>

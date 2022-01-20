@@ -24,3 +24,14 @@
   margin-left: 15%;
   align-items: center;
 }
+
+.container-login{
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+img{
+  width: 60%
+}

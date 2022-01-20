@@ -24,12 +24,12 @@ function App() {
         <Route element={<Layout />}>
           <Route path="Aliado" element={<Aliado />} />
           <Route path="Administrador" element={<Administrador />} />
-          <Route path="InfoColegio" element={<InfoColegio />} />
+          <Route path="InfoColegio/:sId" element={<InfoColegio />} />
           <Route path="MetodologiaOso" element={<MetodologiaOso />} />
           <Route path="ActualizacionInfo" element={<ActualizacionInfo />} />
           <Route path="BancoHerramientas" element={<BancoHerramientas />} />
           <Route path="CrearColegio" element={<CrearColegio />} />
-          <Route path="EditarColegio" element={<EditarColegio />} />
+          <Route path="EditarColegio/:sId" element={<EditarColegio />} />
           <Route path="ConsultarColegio" element={<ConsultarColegio />} />
           <Route path="InfoMetodologia" element={<InfoMetodologia />} />
           <Route path='DocGestion' element={<DocGestion />} />

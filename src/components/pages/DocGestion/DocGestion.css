@@ -14,6 +14,23 @@
   box-shadow: 0px 0px 15px 6px rgba(0,0,0,0.5);
 }
 
-h4{
-    text-align: center;
+.ContainerAccordion{
+  width: 60%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.ContainerCard{
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+}
+.menu-item-container{
+  width: 100%;
+  margin: auto;
+  margin-right: 25px;
+  display: grid;
+  flex-flow: row wrap;
+  grid-template-columns: 40% 40% ;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
