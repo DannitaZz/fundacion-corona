@@ -2,18 +2,19 @@ import React from 'react';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
-import DeleteIcon from '@mui/icons-material/Delete';
 import Stack from '@mui/material/Stack';
 import { Link } from 'react-router-dom';
 import './ConsultarColegio.css';
-import BookmarkSharpIcon from '@mui/icons-material/BookmarkSharp';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Delete from '@mui/icons-material/Delete';
 
-const IconSchool = ({sId}) => {
+const IconSchool = ({ sId }) => {
     return (
         <>
-        <div  className='desing'>
-        <BookmarkSharpIcon/>
-        </div>
+            <div className='desing'>
+                <AccountBalanceIcon></AccountBalanceIcon>
+            </div>
             <Stack spacing={3} direction='row' className='iconos'>
                 <Link to={`/InfoColegio/${sId}`}>
                     <IconButton aria-label="search">
@@ -21,13 +22,15 @@ const IconSchool = ({sId}) => {
                     </IconButton>
                 </Link>
                 <Link to={`/EditarColegio/${sId}`}>
-                <IconButton aria-label="edit">
-                    <ModeEditIcon className='iconEdit'></ModeEditIcon>
-                </IconButton>
+                    <IconButton aria-label="edit">
+                        <ModeEditIcon className='iconEdit'></ModeEditIcon>
+                    </IconButton>
                 </Link>
-                <IconButton aria-label="delete">
-                    <DeleteIcon className='iconDelete'></DeleteIcon>
-                </IconButton>
+                <Link to={`/${sId}`}>
+                    <IconButton aria-label="edit">
+                        <Delete className='iconDelete'></Delete>
+                    </IconButton>
+                </Link>
             </Stack>
         </>
     )
