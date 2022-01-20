@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { createSchool } from '../../../Firebase/functions';
 import validationSchema from '../../forms/validationSquema';
+import { Link } from "react-router-dom";
 
 const CrearColegio = () => {
     const formik = useFormik({
@@ -119,10 +120,11 @@ const CrearColegio = () => {
                             />
                         </div>
                         <br></br>
-
+                        <Link to="/ConsultarColegio">
                         <Button color="primary" className="btn-send" variant="contained" type="submit">
                             Enviar
                         </Button>
+                        </Link>
                     </form>
                 </Card>
             </div>

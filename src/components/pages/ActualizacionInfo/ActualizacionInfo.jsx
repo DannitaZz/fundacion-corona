@@ -6,6 +6,8 @@ import { getPartner, updatePartner } from "../../../Firebase/functions";
 import { Formik } from "formik";
 import Header from "../../Header/Header";
 import "./actualizacionInfo.css";
+import { Link } from "react-router-dom";
+
 
 const ActualizacionInfo = () => {
 
@@ -147,7 +149,7 @@ const ActualizacionInfo = () => {
               />
             </div>
             {touched.email && errors.email && <div className="errores">{errors.email}</div>}
-            <button type="submit">Guardar</button>
+            <Link to="/Aliado"><button type="submit">Guardar</button></Link>
           </form>
         )}
       </Formik>
