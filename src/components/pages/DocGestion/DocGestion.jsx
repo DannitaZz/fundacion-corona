@@ -7,7 +7,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AliadosMenuItem from '../../AliadosMenuItem/AliadosMenuItem'
-
+import DocumentCard from '../../DocumentCard/DocumentCard'
 
 
 const DocMetodologia = () => {
@@ -19,29 +19,30 @@ const DocMetodologia = () => {
             <h2>DOCUMENTOS DE ARTICULACIÓN CON LAS INSTITUCIONES</h2>
           </AccordionSummary>
           <AccordionDetails>
-            <Grid container>
+            <Grid container className="ContainerCard">
             <div className="menu-item-container">
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="Carta de compromisos_IE_Rector"></AliadosMenuItem>
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="Carta consentimiento informado_IE_Rector"></AliadosMenuItem>
+            <DocumentCard img="images/herramientas.png" title="Carta de compromisos IE-Rector" link=''></DocumentCard>
+            <DocumentCard img="images/herramientas.png" title="Carta consentimiento informado_IE_Rector" link=''></DocumentCard>
+            <DocumentCard img="images/herramientas.png" title="Encuesta Rectores" link=''></DocumentCard>
             </div> 
             </Grid>
           </AccordionDetails>
         </Accordion>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
-          <h2>DOCUMENTOS PARA EL DESARROLLO DEL PROGRAMA</h2>
+          <h2>DOCUMENTOS PARA DESARROLLO DEL PROGRAMA</h2>
           </AccordionSummary>
           <AccordionDetails>
             <Grid container>
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="Seguimiento Rectores"></AliadosMenuItem>
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="Línea Base y Seguimiento"></AliadosMenuItem>
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="Línea de Salida"></AliadosMenuItem>
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="Formato Metas y alcances"></AliadosMenuItem>  
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="Formato Seguimiento"></AliadosMenuItem> 
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="2_Guías Noveno"></AliadosMenuItem> 
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="3_Guías Décimo"></AliadosMenuItem> 
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="4_Guías Once"></AliadosMenuItem>
-            <AliadosMenuItem link="BancoHerramientas" img="images/herramientas.png" text="Correo Seguimiento periódico"></AliadosMenuItem> 
+            <DocumentCard img="images/herramientas.png" title="Seguimiento Rectores" link=''></DocumentCard>
+            <DocumentCard img="images/herramientas.png" title="Línea Base y Seguimiento" link=''></DocumentCard>
+            <DocumentCard img="images/herramientas.png" title="Línea de Salida" link=''></DocumentCard>
+            <DocumentCard img="images/herramientas.png" title="Formato Metas y alcances" link=''></DocumentCard>
+            <DocumentCard img="images/herramientas.png" title="Formato Seguimiento" link=''></DocumentCard>
+            <DocumentCard img="images/herramientas.png" title="2_Guías Noveno" link=''></DocumentCard>
+            <DocumentCard img="images/herramientas.png" title="3_Guías Décimo" link=''></DocumentCard>
+            <DocumentCard img="images/herramientas.png" title="4_Guías Once" link=''></DocumentCard>
+            <DocumentCard img="images/herramientas.png" title="correo Seguimiento periódico" link=''></DocumentCard>
             </Grid>
           </AccordionDetails>
         </Accordion>

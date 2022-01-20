@@ -6,10 +6,14 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Stack from '@mui/material/Stack';
 import { Link } from 'react-router-dom';
 import './ConsultarColegio.css';
+import BookmarkSharpIcon from '@mui/icons-material/BookmarkSharp';
 
 const IconSchool = ({sId}) => {
     return (
         <>
+        <div  className='desing'>
+        <BookmarkSharpIcon/>
+        </div>
             <Stack spacing={3} direction='row' className='iconos'>
                 <Link to={`/InfoColegio/${sId}`}>
                     <IconButton aria-label="search">

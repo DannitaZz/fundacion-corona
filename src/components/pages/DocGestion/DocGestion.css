@@ -19,3 +19,18 @@
   margin: auto;
   margin-top: 5%;
 }
+
+.ContainerCard{
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+}
+.menu-item-container{
+  width: 100%;
+  margin: auto;
+  margin-right: 25px;
+  display: grid;
+  flex-flow: row wrap;
+  grid-template-columns: 40% 40% ;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
