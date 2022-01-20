@@ -4,14 +4,13 @@ import {
   Box,
   Typography,
   Grid,
-  Divider
 } from "@mui/material";
 
 
 
 const footer = () => {
   return (
-    <Box sx={{background: 'black', color:'white'}}>
+    <Box sx={{background: '#1D1E21', color:'white'}}>
       <Grid container spacing={3} >
         <Grid item xs={4} >
         <Typography sx={{fontWeight: 'bold', color:'white'}}>PRENSA</Typography>
