@@ -4,6 +4,7 @@ import "./Header.css";
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { getNameUser, userRol, closeSesion } from '../../Firebase/auth';
 import { getPartner, getAdmin } from '../../Firebase/functions';
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -39,7 +40,7 @@ const Header = () => {
     <div>
       <header className="header">
         <div className="brand">
-        <Link to="/Aliados">
+        <Link to="Aliados">
           <img className="logo" src="./images/logo.png" alt="logo" />
         </Link>  
         </div>

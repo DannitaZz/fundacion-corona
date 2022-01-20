@@ -5,7 +5,7 @@ import DocumentCard from "../../DocumentCard/DocumentCard";
 
 const MatCartillas = () => {
   return (
-    <Box>
+    <Box mb={10}>
       <Typography fontFamily='Open Sans' variant="h6" color='#575756' marginX='50px' marginTop='70px' marginBottom='20px'>
         Para la sección de materiales: A continuación, encontrarás las
         herramientas necesarias para poder construir los libros físicos del
