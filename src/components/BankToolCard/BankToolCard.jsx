@@ -8,7 +8,7 @@ import "./BankToolCard.css"
 
 const BankToolCard = ({ img, title }) => {
   return (
-    <Grid items xs={12} sm={6}>
+    <Grid className="gridContainer">
       <Card className="cardDocs">
         <div className="imgCard">
           <CardMedia component="img" image={`./${img}`} alt="InstMedicion" />

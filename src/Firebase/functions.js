@@ -111,7 +111,10 @@ export const createUrl = async (pId, sId, date, url, uId) => {
         url
     })
 }
-export const getUrls =  async (pId, sId) => {
+export const getUrls =  async (sId) => {
+    const auth = getAuth();
+    const user = auth.currentUser;
+    const pId = user.uid;
     return await getDocs(collection(db,'partners', pId, 'schools', sId, 'urls'));
 }
 

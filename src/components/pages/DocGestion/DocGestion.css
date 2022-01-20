@@ -1,7 +1,6 @@
-.containerCard{
+.ContainerAccordion .containerCard{
     width: 100%;
     height: 100vh;
-    
     padding: 5% 10% 5% 10%;
 }
 
@@ -26,6 +25,3 @@
   margin: auto;
   margin-top: 5%;
 }
-
-
-
