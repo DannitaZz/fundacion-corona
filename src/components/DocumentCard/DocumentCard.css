@@ -19,7 +19,7 @@
 .containerDoc{
     width: 200px;
     margin-right: 25px;
-    /* display: grid;
+     /* display: grid;
     flex-flow: row wrap;
     grid-template-columns: 25% 25% 25%;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); */

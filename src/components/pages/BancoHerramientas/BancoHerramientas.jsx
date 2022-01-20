@@ -1,7 +1,6 @@
 import React from "react";
 import "./BancoHerramientas.css";
 import BankToolCard from "../../BankToolCard/BankToolCard";
-import "./BancoHerramientas.css";
 
 export const BancoHerramientas = () => {
   return (
