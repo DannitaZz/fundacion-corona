@@ -35,3 +35,8 @@ h3{
 h6{
     color:#005295
 }
+
+header .brand .logo{
+    width: 250px;
+    height: 40px;
+}

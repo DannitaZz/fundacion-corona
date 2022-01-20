@@ -1,9 +1,10 @@
 .menu {
   display: flex;
   flex-flow: row wrap;
-  gap: 120px;
-  justify-content: center;
-  padding: 80px 200px;
+  row-gap: 100px;
+  justify-content: space-evenly;
+  padding: 100px 120px;
+  column-gap: 20px;
 }
 
 .menu .menu-item-container {
