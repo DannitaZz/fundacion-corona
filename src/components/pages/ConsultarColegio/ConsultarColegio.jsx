@@ -32,14 +32,14 @@ const ConsultarColegio = () => {
         <h3>COLEGIOS</h3>
       </div>
       <div className='newSchools'>
-        <IconAdd />
+        <IconAdd  />
       </div>
       <div className='cardSchools'>
         {
           schools && schools.map((item) => (
             <div key={item.id} className='cardSchool' id={item.id}>
               <h2 className='colegio'>Colegio {item.data().name} </h2>
-              <IconSchool  />
+              <IconSchool  sId={item.id}/>
             </div>
           )
           )
