@@ -13,9 +13,8 @@
 
 .page-container h3 {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  color:#005295;
-
+  font-family: 'Open Sans';
+  color: #005295;
 }
 .page-c{
   display: flex;

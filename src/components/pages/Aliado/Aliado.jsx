@@ -22,7 +22,7 @@ const Aliado = () => {
             <AliadosMenuItem
               link="MetodologiaOso"
               img="images/metologia.png"
-              text="Información Metodologia oso"
+              text="Información Metodología oso"
               tooltip="Encuentra todos los documentos e información para el desarrollo del Programa">
             </AliadosMenuItem>
           </div>
