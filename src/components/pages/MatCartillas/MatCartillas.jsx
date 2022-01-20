@@ -1,13 +1,13 @@
 import React from "react";
 import "./MatCartillas.css";
-import { Grid } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import DocumentCard from '../../DocumentCard/DocumentCard'
 
 const MatCartillas = () => {
   return (
-    <div>
-      <Grid container className="containerMat">
-        <div className="menu-container-mat">
+    <Box>
+      <Typography></Typography>
+        <Box display='flex' flexWrap='wrap' justifyContent='center' >
           <DocumentCard
             img="images/folderPortada.png"
             title="FOLDER DE PORTADAS"
@@ -53,9 +53,8 @@ const MatCartillas = () => {
             title="Portada y Contraportada"
             link="https://firebasestorage.googleapis.com/v0/b/f-corona-oso.appspot.com/o/Insumos%20para%20impresion%2F5%20_%20PORTADA%20Y%20CONTRAPORTADA.pdf?alt=media&token=c1222815-87d0-4427-9eba-36539dbc9d19"
           ></DocumentCard>
-        </div>
-      </Grid>
-    </div>
+        </Box>
+    </Box>
   );
 };
 
