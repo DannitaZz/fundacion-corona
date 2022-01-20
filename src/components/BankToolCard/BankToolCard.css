@@ -1,7 +1,10 @@
+.gridContainer {
+    max-width: 500px;
+}
+
 .cardDocs h3{
     text-align: center;
     font-family: Open Sans;
     font-weight: 12px;
-} 
-
+}
 
