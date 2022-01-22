@@ -1,0 +1,70 @@
+.formulario{
+  margin:auto;
+  margin-top: 30px;
+  margin-bottom: 10%;
+  width: 60%;
+  height: auto;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-top: 20px;
+  -webkit-box-shadow: 0px 0px 15px 6px rgba(0,0,0,0.5); 
+  box-shadow: 0px 0px 15px 6px rgba(0,0,0,0.5);
+}
+
+.title{
+  margin: auto;
+  width: 60%;
+}
+
+h2{
+  margin: auto;
+  margin-top: 40px;
+  color:var(--panton-653);
+  font-size: 25px;
+  font-weight: 500;
+  text-align:center;
+}
+
+
+.divInputs{
+  margin:auto;
+  width:80%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+label{
+  font-size: 18px;
+  font-weight:400;
+  margin-bottom: 2px;
+  color: var(--panton-653);
+}
+
+input{
+  background: #FFFFFF;
+  height: 25px;
+  border: none;
+  border-bottom: 1px solid var(--panton-653);
+  font-size: 20px;
+  color: var(--panton-430);
+  font-weight:400;
+}
+
+button{
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width:40%;
+  font-size:20px;
+  background-color:var(--panton-653);
+  color:#FFFFFF;
+}
+
+.errores{
+  color: rgb(170, 15, 15);
+  font-size:medium;
+}

@@ -1,0 +1,17 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+}
+
+.loginForm .button-form {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: var(--panton-653);
+}
+
+.loginForm .input-form {
+  margin: 10px;
+}

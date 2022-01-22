@@ -1,0 +1,17 @@
+.menu {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 100px;
+  justify-content: space-evenly;
+  padding: 100px 120px;
+  column-gap: 20px;
+  margin-bottom: 12%;
+}
+
+.menu .menu-item-container {
+  width: 350px;
+}
+
+.menu .menu-item-container span {
+  font-family: Open Sans;
+}
