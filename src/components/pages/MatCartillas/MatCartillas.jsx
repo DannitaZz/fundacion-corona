@@ -20,7 +20,7 @@ const MatCartillas = () => {
           link="https://firebasestorage.googleapis.com/v0/b/f-corona-oso.appspot.com/o/Insumos%20para%20impresion%2F0%20_FOLDER_PORTADAS_TODO.pdf?alt=media&token=3ec189a2-f5b6-4ea9-9ae3-909e92f90ba4"
         ></DocumentCard>
         <DocumentCard
-          img="images/lbase.png"
+          img="images/lBase.png"
           title="Portada marco general"
           link="https://firebasestorage.googleapis.com/v0/b/f-corona-oso.appspot.com/o/Insumos%20para%20impresion%2F1%20_%20PORTADA%20MARCO%20GENERAL.pdf?alt=media&token=1b577e9d-d1f8-4f52-9b6d-2ea005d65a38"
         ></DocumentCard>
